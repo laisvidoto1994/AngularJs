@@ -1,0 +1,120 @@
+<!-- https://www.youtube.com/watch?v=dCWkeFBCPnA&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb&index=2 -->
+<!-- ng-app=>Definindo as fornteiras da aplicação -->
+<html ng-app="listaTelefonica">
+    <head>
+        <title>Lista Telefônica</title> 
+        <script src="lib/angular-1.7.2/angular.js"></script> 
+        <script src="lib/angular-1.7.2/angular.min.js"></script>  
+        <script src="style/index.css"></script>  
+        <style>
+            .selecionado
+            {
+                background-color: blueviolet;
+            }
+        </style>
+        <script>
+            angular.module("listaTelefonica", []);
+            angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope)
+            {
+                $scope.app = "Lista Telefonica"
+                $scope.contatos =
+                [
+                    {
+                        nome:"Pedro", telefone: "9999-8888"
+                    },
+                    {
+                        nome:"Ana", telefone: "9999-7777"
+                    },
+                    {
+                        nome:"Maria", telefone: "9999-6666"
+                    }
+                ];
+
+                $scope.addContato = function(contato)
+                {
+                    $scope.contatos.push( angular.copy(contato) ); 
+                    delete $scope.contato;
+                };
+
+                $scope.operadoras = 
+                [
+                    {
+                        nome:"oi", codigo: 14, categoria:"celular" 
+                    },
+                    {
+                        nome:"vivo", codigo: 15,categoria:"fixo" 
+                    },
+                    {
+                        nome:"tim", codigo: 41,categoria:"celular" 
+                    },
+                    {
+                        nome:"tim", codigo: 25,categoria:"fixo" 
+                    },
+                    {
+                        nome:"tim", codigo: 21,categoria:"fixo" 
+                    }
+                ];
+
+
+            }); 
+        </script>   
+    </head>
+    <body ng-controller="listaTelefonicaCtrl">  
+        <div>
+            <!-- ng-bind(Subistitui o elemento  por uma expressão) => {{app}} -->
+            <h1 ng-bind="app"></h1>   
+
+            <table >
+                <tr> 
+                    <!-- 
+                    <th> Nome </th>
+                    <th> Telefone </th> 
+                    -->
+                    <th>  </th>
+                    <th>
+                        <h3>Nome</h3>
+                    </th>
+                    <th>
+                        <h3>Telefone</h3>
+                    </th>
+                    <th>
+                        <h3>operadora</h3>
+                    </th>
+                </tr>
+                 <!--
+                <tr ng-repeat="contato in contatos">
+                    <td ng-repeat="(key, value) in contato">
+                        {{value}} 
+                    </td>
+                </tr>
+                -->
+                <!-- ng-repeat(ele faz á leitura linha á linha de contatos EM contatos(lista) ) -->
+                <tr ng-class="{selecionado: contato.selecionado}" ng-repeat="contato in contatos">
+                    <td>
+                        <input type="checkbox" ng-model="contato.selecionado">
+                    </td>
+                    <td>
+                        <h3>{{contato.nome}}</h3>
+                    </td>
+                    <td>
+                        <h3>{{contato.telefone}}</h3>
+                    </td>
+                    <td>
+                        <h3>{{contato.operadora.nome}}</h3>
+                    </td>
+                </tr>
+            </table> 
+            <input type="text" placeholder="nome" ng-model="contato.nome"/><br/> <br/> 
+            <input type="text" placeholder="telefone" ng-model="contato.telefone"/>
+            <!-- ng-options
+            (valorDoCampoQueVaiSalvarNoObjetoContato AS valorDoCampoQueApareceNaTela GROUP BY nomeValorSeparadoPorCategoria FOR itemAtual EM listaComTodosOsRegistros) 
+            -->
+            <select ng-model="contato.operadora" 
+            ng-options="operadora.codigo as operadora.nome group by operadora.categoria for operadora in operadoras">
+                <option value="">Selecione uma operadora</option>
+            </select>
+            <!-- ng-disabled(desabilita para clicar) -->
+            <button ng-click="addContato(contato)" ng-disabled="!contato.nome || !contato.telefone">Adicionar Contatos</button>  
+        </div> 
+    </body>
+</html>
