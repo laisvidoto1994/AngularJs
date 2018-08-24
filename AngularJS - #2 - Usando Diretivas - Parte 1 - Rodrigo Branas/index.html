@@ -1,11 +1,73 @@
-<!-- https://www.youtube.com/watch?v=dCWkeFBCPnA&index=2&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb -->
+<!-- https://www.youtube.com/watch?v=dCWkeFBCPnA&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb&index=2 -->
 <!-- ng-app=>Definindo as fornteiras da aplicação -->
-<html ng-app="testeInicial">
+<html ng-app="listaTelefonica">
     <head>
-        <title>Lista Telefônica</title>
-        <script src="lib/angular-1.7.2/angular.js"></script>  
+        <title>Lista Telefônica</title> 
+        <script src="lib/angular-1.7.2/angular.js"></script> 
+        <script src="lib/angular-1.7.2/angular.min.js"></script>  
+        <script src="style/index.css"></script>  
+        <script>
+            angular.module("listaTelefonica", []);
+            angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope)
+            {
+                $scope.app = "Lista Telefonica"
+                $scope.contatos =
+                [
+                    {
+                        "nome":"Pedro", "telefone": "99998888"
+                    },
+                    {
+                        "nome":"Ana", "telefone": "99997777"
+                    },
+                    {
+                        "nome":"Maria", "telefone": "99996666"
+                    }
+                ];
+                $scope.addContato = function(contato)
+                {
+                    $scope.contatos.push( angular.copy(contato) ); 
+                    delete $scope.contato;
+                };
+            }); 
+        </script>   
     </head>
-    <body>  
-         
+    <body ng-controller="listaTelefonicaCtrl">  
+        <div>
+            <!-- ng-bind(Subistitui o elemento  por uma expressão) => {{app}} -->
+            <h1 ng-bind="app"></h1> 
+            <table >
+                <tr> 
+                    <!-- 
+                    <th> Nome </th>
+                    <th> Telefone </th> 
+                    -->
+                    <th>
+                        <h3>Nome</h3>
+                    </th>
+                    <th>
+                        <h3>Telefone</h3>
+                    </th>
+                </tr>
+                 <!--
+                <tr ng-repeat="contato in contatos">
+                    <td ng-repeat="(key, value) in contato">
+                        {{value}} 
+                    </td>
+                </tr>
+                -->
+                <!-- ng-repeat(ele faz á leitura linha á linha de contatos EM contatos(lista) ) -->
+                <tr ng-repeat="contato in contatos">
+                    <td>
+                        <h3>{{contato.nome}}</h3>
+                    </td>
+                    <td>
+                        <h3>{{contato.telefone}}</h3>
+                    </td>
+                </tr>
+            </table> 
+            <input type="text" placeholder="nome" ng-model="contato.nome"/><br/> <br/> 
+            <input type="text" placeholder="telefone" ng-model="contato.telefone"/>
+            <button ng-click="addContato(contato)">Adicionar Contatos</button>  
+        </div> 
     </body>
 </html>
