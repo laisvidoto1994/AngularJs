@@ -1,0 +1,123 @@
+<!-- https://www.youtube.com/watch?v=HDjpIT2TLP0&index=4&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb -->
+<!-- ng-app=>Definindo as fornteiras da aplicação -->
+
+<html ng-app="listaTelefonica">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- asentuação dos componentes -->
+    <title>Lista Telefônica</title>
+    <script src="lib/angular-1.7.2/angular.js"></script>
+    <script src="lib/angular-1.7.2/angular-messages.js"></script>
+    <script src="javascript.js"></script>
+    <script src="style/index.css"></script>
+    <style>
+        .selecionado {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body ng-controller="listaTelefonicaCtrl">
+    <div>
+        <!-- ng-bind(Subistitui o elemento  por uma expressão) => {{app}} -->
+        <h1 ng-bind="app"></h1>
+        <br/>
+        <br/>
+
+        <input type="text" ng-model="criterioDeBusca" placeholder="o que você busca?" />
+        <br/>
+        <br/>
+
+        <table ng-show="contatos.length > 0">
+            <tr>
+                <th></th>
+                <th>
+                    <h3>Nome</h3>
+                </th>
+                <th>
+                    <h3>Telefone</h3>
+                </th>
+                <th>
+                    <h3>operadora</h3>
+                </th>
+                <th>
+                    <h3>Cor</h3>
+                </th>
+                <th>
+                    <h3>Data</h3>
+                </th>
+            </tr>
+            <!-- ng-repeat(ele faz á leitura linha á linha de contatos EM contatos(lista) ) -->
+            <tr ng-class="{selecionado: contato.selecionado}" ng-repeat="contato in contatos | filter: criterioDeBusca | orderBy: 'nome' : true">
+                <td>
+                    <input type="checkbox" ng-model="contato.selecionado"> </td>
+                <td>
+                    <h3>{{contato.nome | uppercase }}</h3>
+                </td>
+                <td>
+                    <h3>{{contato.telefone}}</h3>
+                </td>
+                <td>
+                    <h3>{{contato.operadora.nome | lowercase}}</h3>
+                </td>
+                <td>
+                    <div style="width: 20px; height: 20px;" ng-style="{'background-color': contato.cor}"> </div>
+                </td>
+                <td>
+                    <h3>{{contato.data | date:'dd/MM/yyyy HH:mm' }}</h3>
+                </td>
+            </tr>
+        </table>
+
+        <form name="contatoForm">
+            <input type="text" placeholder="nome" ng-model="contato.nome" name="nomes" ng-required="true" ng-minlength="10" />
+            <br/>
+            <br/>
+            <input type="text" placeholder="telefone" ng-model="contato.telefone" name="telefones" ng-required="true" ng-pattern="/^\d{4,5}-\d{4}$/"
+            />
+        </form>
+
+
+        <div ng-messages="contatoForm.nomes.$error">
+
+            <div ng-message="required">
+                Por favor, preencha o nome!
+            </div>
+            <div ng-message="minlength">
+                Por favor, preencha o nome com no minimo de 10 caracteres!
+            </div>
+        </div>
+
+
+        <div ng-show="contatoForm.telefones.$error.required && contatoForm.telefones.$dirty">
+            Por favor, preencha o telefone!
+        </div>
+        <div ng-show="contatoForm.telefones.$error.pattern">
+            telefone deve ter o formato de DDDD-DDDD ou DDDDD-DDDD!
+        </div>
+
+        <br/>
+        <br/>
+
+        <select ng-model="contato.operadora" ng-options="operadora.codigo as operadora.nome group by operadora.categoria for operadora in operadoras">
+            <option value="">Selecione uma operadora</option>
+        </select>
+
+        <br/>
+        <br/>
+
+        <!-- ng-disabled(desabilita para clicar) -->
+        <button ng-click="addContato(contato)" ng-disabled="contatoForm.$invalid">Adicionar Contatos</button>
+
+        <br/>
+        <br/>
+
+        <button ng-click="ApagarContato(contatos)" ng-show="isContatoSelecionado(contatos)">Apagar Contatos</button>
+    </div>
+
+    <div ng-include="'footer.html'"></div>
+
+</body>
+
+</html>

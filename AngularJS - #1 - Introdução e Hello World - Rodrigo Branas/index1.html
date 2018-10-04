@@ -1,0 +1,21 @@
+<!-- https://www.youtube.com/watch?v=_y7rKxqPoyg&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb&index=1 -->
+<!-- ng-app=>Definindo as fornteiras da aplicação -->
+<html ng-app="testeInicial">
+
+<head>
+    <title>1º Teste</title>
+    <script src="angular-1.7.2/angular.js"></script>
+    <!-- importação do angulaJs -->
+    <script src="javascript.js"></script>
+    <!-- importação do javaScript-> onde está toda á logica da tela(controller dessa pagina) --> 
+</head>
+
+<body>
+    <!-- ng-controller-> está chamando o controller 'testeInicialCtrl' para fazer alguma ação ou receber dados -->
+    <div ng-controller="testeInicialCtrl">
+        <!--  {{message}}-> declaração para mostrar algum conteudo de esta no controller dentro do $scope -->
+        {{message}}
+    </div>
+</body>
+
+</html>
