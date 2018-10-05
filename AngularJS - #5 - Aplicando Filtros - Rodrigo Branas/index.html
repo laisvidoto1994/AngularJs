@@ -9,6 +9,7 @@
     <title>Lista Telefônica</title>
     <script src="lib/angular-1.7.2/angular.js"></script>
     <script src="lib/angular-1.7.2/angular-messages.js"></script>
+    <script src=" /node_modules/angular-locale-pt-br/angular-locale_pt-br.js"></script>
     <script src="javascript.js"></script>
     <script src="style/index.css"></script>
     <style>
@@ -33,10 +34,14 @@
             <tr>
                 <th></th>
                 <th>
-                    <h3>Nome</h3>
+                    <a href="" ng-click="ordenarPor('nome')">
+                        <h3>Nome</h3>
+                    </a>
                 </th>
                 <th>
-                    <h3>Telefone</h3>
+                    <a href="" ng-click="ordenarPor('telefone')">
+                        <h3>Telefone</h3>
+                    </a>
                 </th>
                 <th>
                     <h3>operadora</h3>
@@ -49,11 +54,11 @@
                 </th>
             </tr>
             <!-- ng-repeat(ele faz á leitura linha á linha de contatos EM contatos(lista) ) -->
-            <tr ng-class="{selecionado: contato.selecionado}" ng-repeat="contato in contatos | filter: criterioDeBusca | orderBy: 'nome' : true">
+            <tr ng-class="{selecionado: contato.selecionado}" ng-repeat="contato in contatos | filter: criterioDeBusca | orderBy: criterioDeOrdenacao : direcaoDaOrdenacao">
                 <td>
                     <input type="checkbox" ng-model="contato.selecionado"> </td>
                 <td>
-                    <h3>{{contato.nome | uppercase }}</h3>
+                    <h3>{{contato.nome}}</h3>
                 </td>
                 <td>
                     <h3>{{contato.telefone}}</h3>
@@ -99,8 +104,13 @@
 
         <br/>
         <br/>
-
-        <select ng-model="contato.operadora" ng-options="operadora.codigo as operadora.nome group by operadora.categoria for operadora in operadoras">
+        
+        <!-- 
+            <select ng-model="contato.operadora" ng-options="operadora.codigo as operadora.nome group by operadora.categoria for operadora in operadoras">
+            <option value="">Selecione uma operadora</option>
+        </select>
+        -->
+        <select ng-model="contato.operadora" ng-options="operadora.nome +' ( '+(operadora.preco|currency)+ ' )' for operadora in operadoras">
             <option value="">Selecione uma operadora</option>
         </select>
 

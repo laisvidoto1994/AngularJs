@@ -1,23 +1,23 @@
 angular.module("listaTelefonica", ["ngMessages"]);
 
-angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope) {
+angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, uppercaseFilter) {
 
     $scope.app = "Lista Telefonica";
 
     $scope.contatos =
         [
-            { nome: "Pedro", telefone: "9999-8888", data: new Date(), operadora: {nome: "Oi", odigo: 14, categoria: "celular"}, cor: "blue" },
+            { nome: uppercaseFilter("Pedro"), telefone: "9999-8888", data: new Date(), operadora: {nome: "Oi", odigo: 14, categoria: "celular"}, cor: "blue" },
             { nome: "Ana", telefone: "9999-7777", data: new Date(), operadora: {nome: "vivo", codigo: 15, categoria: "fixo"},cor: "yellow" },
             { nome: "Maria", telefone: "9999-6666",data: new Date(), operadora: {nome: "tim", codigo: 41, categoria: "celular" }, cor: "red" }
         ];
 
     $scope.operadoras =
         [
-            { nome: "oi", codigo: 14, categoria: "celular" },
-            { nome: "vivo", codigo: 15, categoria: "fixo" },
-            { nome: "tim", codigo: 41, categoria: "celular" },
-            { nome: "tim", codigo: 25, categoria: "fixo" },
-            { nome: "tim", codigo: 21, categoria: "fixo" }
+            { nome: "Oi", codigo: 14, categoria: "celular",preco:2 },
+            { nome: "Vivo", codigo: 15, categoria: "celular",preco:1 },
+            { nome: "Tim", codigo: 41, categoria: "celular",preco:3 },
+            { nome: "GVT", codigo: 25, categoria: "fixo",preco:1 },
+            { nome: "Embratel", codigo: 21, categoria: "fixo",preco:2 }
         ];
  
     $scope.addContato = function (contato) {
@@ -42,8 +42,12 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
        return contatos.some(function (contato){
             return contato.selecionado;
         });
-
     }
+
+    $scope.ordenarPor = function(campo){
+        $scope.criterioDeOrdenacao = campo;
+        $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
+    };
 
 
 }); 
