@@ -57,7 +57,10 @@ limitTo-> limita um array ou uma string
 $http-> permite a realização de qequisições utilizando XMLHttpRequest ou via JSONP(get,post,put,delete,head,jsonp)
 sop-> same-origin policy
 JSONP-> JSON 
-
+factory-> 
+service
+value
+provider
 
 
 

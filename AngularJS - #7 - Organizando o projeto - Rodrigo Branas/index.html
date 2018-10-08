@@ -1,4 +1,4 @@
-<!-- https://www.youtube.com/watch?v=Ma6VVQdvGq4&index=7&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb -->
+<!-- https://www.youtube.com/watch?v=Y0dF9juoJb8&index=8&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb -->
 
 <html ng-app="listaTelefonica">
 
@@ -13,7 +13,12 @@
     <script src="javaScript/app.js"></script>
     <script src="javaScript/controllers/listaTelefonicaCtrl.js"></script>
     <script src="javaScript/json/contatos.json"></script>
-    <script src="javaScript/json/operadoras.json"></script>    
+    <script src="javaScript/json/operadoras.json"></script>   
+    <script src="javaScript/services/contatosAPIService.js"></script>   
+    <script src="javaScript/services/operadorasAPIService.js"></script> 
+    <script src="javaScript/services/configValue.js"></script> 
+    <script src="javaScript/services/serialGeneratorService.js"></script> 
+    <script src="javaScript/config/serialGeneratorConfig.js"></script> 
 </head>
 
 <body ng-controller="listaTelefonicaCtrl">
@@ -27,6 +32,7 @@
         <table class="distancia tabela" ng-show="contatos.length > 0">
             <tr>
                 <th>#</th>
+                <th>Serial</th>
                 <th>
                     <a href="" ng-click="ordenarPor('nome')">
                         <h3>Nome</h3>
@@ -48,8 +54,14 @@
                 </th>
             </tr>
             <tr ng-class="{selecionado: contato.selecionado}" ng-repeat="contato in contatos | filter: criterioDeBusca | orderBy: criterioDeOrdenacao : direcaoDaOrdenacao">
+                             
                 <td>
-                    <input type="checkbox" ng-model="contato.selecionado"> </td>
+                    <input type="checkbox" ng-model="contato.selecionado"> 
+                </td>
+                 
+                <td>
+                    <h3>{{contato.serial}}</h3>
+                </td> 
                 <td>
                     <h3>{{contato.nome}}</h3>
                 </td>

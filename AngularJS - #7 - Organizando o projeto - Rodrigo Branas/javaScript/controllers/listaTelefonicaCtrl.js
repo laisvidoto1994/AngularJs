@@ -1,7 +1,6 @@
-angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, uppercaseFilter, $http) {
+angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, uppercaseFilter, contatosAPI, operadorasAPI, serialGenerator) {
 
-    $scope.app = "Lista Telefônica";
-
+    $scope.app = "Lista Telefônica"; 
     $scope.contatos = [];
     $scope.operadoras = [];
 
@@ -21,7 +20,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
 
     var carregarOperadoras = function () {
 
-        $http.get("http://127.0.0.1:5500/javaScript/json/operadoras.json")
+        operadorasAPI.getOperadoras()
             .then(function (data) {
 
                 for (var index = 0; index < data.data.length; index++) { 
@@ -33,7 +32,7 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
 
     var carregarContatos = function () { 
 
-        $http.get("http://127.0.0.1:5500/javaScript/json/contatos.json")
+        contatosAPI.getContatos()
             .then(function (data) {
 
                 for (var index = 0; index < data.data.length; index++) {
@@ -45,8 +44,12 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     };
 
     $scope.addContato = function (contato) {
-        
-        $http.post("http://127.0.0.1:5500/javaScript/json/contatos.json", contato)
+ 
+        contato.serial = serialGenerator.generate();
+
+        contato.data = new Date(); 
+
+        contatosAPI.saveContato(contato)
             .then(function (data) {
 
                 delete $scope.contato;
