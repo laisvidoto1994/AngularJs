@@ -19,6 +19,7 @@
     <script src="javaScript/services/configValue.js"></script> 
     <script src="javaScript/services/serialGeneratorService.js"></script> 
     <script src="javaScript/config/serialGeneratorConfig.js"></script> 
+    <script src="javaScript/filters/nameFilter.js"></script> 
 </head>
 
 <body ng-controller="listaTelefonicaCtrl">
@@ -63,7 +64,7 @@
                     <h3>{{contato.serial}}</h3>
                 </td> 
                 <td>
-                    <h3>{{contato.nome}}</h3>
+                    <h3>{{contato.nome |name}}</h3>
                 </td>
                 <td>
                     <h3>{{contato.telefone}}</h3>
