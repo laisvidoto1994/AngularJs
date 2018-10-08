@@ -1,0 +1,24 @@
+.selecionado 
+{
+    background-color: aqua;
+}
+
+.distancia
+{
+    margin-top: 20px; 
+}
+
+.alinhamento{
+    text-align: center;
+}
+
+table, th, td 
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td 
+{
+    padding: 5px;
+    text-align: left;
+}
