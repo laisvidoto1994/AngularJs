@@ -1,0 +1,110 @@
+.selecionado 
+{
+    background-color: aqua;
+}
+
+.tamanhoQuadrado
+{ 
+    width: 30px; 
+    height: 30px;
+}
+ 
+.distancia
+{
+    margin-top: 20px; 
+}
+
+.alinhamento{
+    text-align: center;
+}
+
+table{
+    margin: 0 0 0 28%;
+}
+
+table, th, td 
+{
+    border: 1px solid #4F4F4F;
+    border-collapse: collapse; 
+}
+
+th, td 
+{
+    padding: 5px;
+    text-align: left;
+}
+
+td{
+    text-align: center; 
+    color: #4F4F4F;   
+   
+}
+th
+{   
+    text-align: center;
+    
+    background-color: #DCDCDC;
+}
+
+.ui-alert
+{    
+    margin: 0 30% 0 30%;
+    background-color: rgb(241, 194, 194);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}   
+
+.ui-alert-title
+{
+    color: brown;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.ui-alert-message
+{
+    color: brown;
+}
+ 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active 
+{
+    background-color: #4CAF50;
+}
+
+.footer 
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    color: white;
+    text-align: center;
+ }
