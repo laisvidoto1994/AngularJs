@@ -1,0 +1,59 @@
+
+// ################################################################################//
+// #grafico dos circulos
+// https://opentechschool.github.io/js-beginners-1/
+// ################################################################################//
+
+function rainbow(x, y,cores)
+{
+  var colors = cores;
+  var count = 0;
+  
+  while (count < colors.length) 
+  {
+    color(colors[count]);
+    circle(x, y, 90 - 7 * count);
+    count = count + 1;
+  }
+}
+
+function drawing() 
+{  
+  var cores1 = ["red", "green", "yellow", "purple", "cyan", "orange", "white","pink","black","blue","Brown","Gray"];  
+  var cores2 = ["green", "yellow", "purple", "cyan", "orange", "white","pink","black","blue","Brown","Gray"];  
+  var cores3 = ["yellow", "purple", "cyan", "orange", "white","pink","black","blue","Brown","Gray"];
+  
+  rainbow(-530, 80, cores1);
+  rainbow(-330, 80, cores2);
+  rainbow(-130, 80, cores3);
+}
+
+// As seguintes funções estão disponíveis:
+//
+// color (string) - define a cor atual do traço
+// lineWidth (number) - define a largura da linha
+// box (x, y, width, height) - desenhe uma caixa
+// circle (x, y, radius) - desenhe um círculo
+// line (x1, y1, x2, y2) - desenhe uma linha
+// text (x, y, string) - desenhe texto
+// clear () - limpa a tela
+// path (string) - desenhe uma linha complexa
+// Em uma descrição de linha, os seguintes comandos são válidos:
+// g x y - vai para o ponto x, y sem desenhar
+// l x y - desenha uma linha do ponto atual para o ponto x, y
+// c - desenha uma linha de volta ao início da linha
+// q x y cx cy - desenha uma curva para x, y, usando cx, cy as
+// 'ponto de controle' para determinar a curvatura
+//
+// fill () - preenche o caminho atual com a cor atual
+//
+// Coordenadas são interpretadas como se 0,0 é o centro do
+// tela. x é o eixo horizontal e y a vertical.
+// Positivo x vai para a direita, positivo y sobe.
+// Essas operações podem transformar o sistema de coordenadas:
+//
+// moveTo (x, y) - move a origem para x, y
+// rotate (degrees) - rotaciona as operações de desenho subseqüentes
+// por vários graus
+// escala (fator) - escala operações de desenho subseqüentes
+// goBack () - desfaz uma transformação

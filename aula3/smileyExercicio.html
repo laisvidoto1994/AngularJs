@@ -1,0 +1,92 @@
+
+// ################################################################################//
+// #smiley Girando
+// https://opentechschool.github.io/js-beginners-1/sandbox/#drawing_animate.js
+// https://opentechschool.github.io/js-beginners-1/
+// ################################################################################//
+
+// The old smiley function from the previous step
+function smiley(x, y) {
+  moveTo(x, y);
+  
+  //desenhando o rosto
+  color("purple"); 
+  circle(0, 0, 60);
+  
+  //desenho olho esquerdo
+  color("green");
+  circle(-20, 10, 7);
+  
+  //desenho olho direito
+  color("blue");
+  circle(20, 10, 7);
+  
+  //espeçura da linha
+  color("red");  
+  lineWidth(3);
+ 
+  //desenho da boca
+  path("g -20 -10 q 20 -10 0 -50 c");
+  goBack();
+}
+
+function drawing() 
+{
+  // The angle variable stores the current rotation
+  var angle = 0;
+  // Draw twenty frames per second (20 * 50 = 1000 milliseconds)
+  setInterval(frame, 50);
+  
+  function frame() 
+  {
+    // limpa á tela
+    clear();
+    
+    // atualiza o angulo girando para direita
+    //angle = angle - 2;    
+    
+    // atualiza o angulo girando para esquerda
+    angle = angle + 2;
+    
+    // Girar o que estamos prestes a desenhar
+    rotate(angle);
+    
+    // desenhando bastão
+    color("black");
+    box(-5, 100, 10, 150);
+    
+    // desenhe smiley
+    smiley(0, 100);
+    smiley(130, 100);
+  }
+}
+
+// As seguintes funções estão disponíveis:
+//
+// color (string) - define a cor atual
+// lineWidth (number) - define a largura da linha
+// box (x, y, width, height) - desenhe uma caixa
+// circle (x, y, radius) - desenhe um círculo
+// line (x1, y1, x2, y2) - desenhe uma linha
+// text (x, y, string) - desenhe texto
+// clear () - limpa a tela
+// path (string) - desenhe uma linha complexa
+// Em uma descrição de linha, os seguintes comandos são válidos:
+// g x y - vai para o ponto x, y sem desenhar
+// l x y - desenha uma linha do ponto atual para o ponto x, y
+// c - desenha uma linha de volta ao início da linha
+// q x y cx cy - desenha uma curva para x, y, usando cx, cy as
+// 'ponto de controle' para determinar a curvatura
+//
+// fill () - preenche o caminho atual com a cor atual
+//
+// Coordenadas são interpretadas como se 0,0 é o centro do
+// tela. x é o eixo horizontal e y a vertical.
+// Positivo x vai para a direita, positivo y sobe.
+// Essas operações podem transformar o sistema de coordenadas:
+//
+// moveTo (x, y) - move a origem para x, y
+// rotate (degrees) - rotaciona as operações de desenho subseqüentes
+// por vários graus
+// escala (fator) - escala operações de desenho subseqüentes
+// goBack () - desfaz uma transformação
