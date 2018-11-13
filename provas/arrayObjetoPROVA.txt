@@ -1,0 +1,406 @@
+﻿/*
+	Questão1
+*/
+
+function maior(numero)
+{
+  var valor;
+  var num = 10;
+
+  if(numero > num)
+  {
+		valor = true;
+  }
+	else
+  {
+  		valor = false;
+  }
+  
+  return valor;
+}
+
+var resposta = 0;
+var numero   = 10;
+
+resposta = maior(numero);
+
+console.log("numero: " + numero);
+console.log("o numero é Maior que 10: " + resposta);
+
+/*
+	Questão2
+*/
+
+function par(numero)
+{
+  var valor;
+  var num = 10;
+
+  if(numero % 2 == 0)
+  {
+	valor = true;
+  }
+  else
+  {
+  	valor = false;
+  }  
+  
+  return valor;
+}
+
+var resposta = 0;
+var numero   = 12;
+
+resposta = par(numero);
+
+console.log("numero: " + numero);
+console.log("é par: " + resposta);
+
+/*
+	Questão3
+*/
+
+function somaDigito(numero) 
+{
+    var soma = 0;
+
+    while (numero != 0) 
+    {
+        soma   += numero % 10;
+        numero  = parseInt(numero / 10); // <--- atenção
+    }
+
+    return soma;
+}
+
+var resposta = 0;
+var numero   = 12;
+
+resposta = somaDigito(numero);
+
+console.log("numero digitado: " + numero);
+console.log("resposta na somar os digitos: " + resposta);
+
+/*
+	Questão4
+*/
+
+
+/*
+	Questão5
+*/
+
+var resposta;
+
+function primo(numero)
+{
+	var divison = 2;
+  
+  while(divisor != numero)
+  {
+  	if(numero % divisor == 0 && divisor != numero)
+    {
+    	return false;
+    }
+    else
+    {
+    console.log(divisor);
+    	divisor++;
+    }
+  	return true;
+  }   
+}
+
+resposta = primo(19);
+
+console.log("numero é primo: " + resposta);
+
+
+
+/*
+	Questão6
+*/
+
+function carregar(numero)
+{
+  var valor = [];
+
+  for(var cont = 1; cont <= numero; cont++)
+  {
+     valor = [cont]
+     console.log("numero: " + valor);
+  }    
+}
+
+var resposta = 0;
+var numero   = 5;
+
+resposta = carregar(numero);
+
+
+/*
+	Questão7
+*/
+function contar(vetor)
+{
+	var cont = 0;
+  var soma = 0;
+  
+  while(cont < vetor.length)
+  {
+  	soma =  soma + vetor[cont];
+  	cont++;
+  }  
+  return soma;
+}
+
+var resposta ;
+
+resposta = contar([1,2,3,4,5]);
+
+console.log("soma os itens do vetor: " + resposta);
+
+
+/*
+	Questão8
+*/
+
+function contar(array)
+{
+	var maior = 0;
+  var menor = array[0];
+  var cont = 0;
+  var indiceMaior = 0;  
+  var indiceMenor = 0;
+  
+  while(cont < vetor.length)
+  {
+    if(array[cont] > maior)
+    {
+			maior = array[cont];
+      indiceMaior = cont;
+    }
+    if(array[cont] > menor)
+    {
+			menor = array[cont];
+      indiceMenor = cont;
+    }
+    
+  	cont++;
+  }  
+}
+
+var resposta ;
+
+resposta = contar([1,2,3,4,5]);
+
+console.log("soma os itens do vetor: " + resposta);
+
+
+
+/*
+	Questão9
+*/
+
+
+function qtdVogais(texto)
+{
+  var valor = [];
+  var cont = 0;
+  var vogais = 0;
+  
+  while(cont < texto.length)
+  {  	
+  	if(texto[cont]   == "a" || texto[cont] == "A"  
+    	|| texto[cont] == "e" || texto[cont] == "E"  
+    	|| texto[cont] == "i" || texto[cont] == "I" 
+      || texto[cont] == "o" || texto[cont] == "O" 
+      || texto[cont] == "u" || texto[cont] == "U")
+    {
+    	vogais++;
+    }
+  	//valor = texto[cont];
+    
+    cont++;
+  }
+  
+  return vogais;
+}
+
+var resposta = 0;
+var texto   = "Eva";
+
+var resposta = qtdVogais(texto);
+
+console.log("texto: " + texto);
+console.log("Quantidade de Vogais: " + resposta);
+
+
+/*
+	Questão10
+*/
+
+
+/*
+Faça um programa que receba a idade, o peso e o sexo de 10 pessoas. Calcule e imprima:
+•	total de homens;
+•	total de mulheres;
+•	média das idades dos homens;
+•	média dos pesos das mulheres.
+*/
+
+function totalHomens(pessoa)
+{
+  var cont        = 0;
+  var totalHomens = 0;
+  
+  while(cont < pessoa.length)
+  {  
+    if(pessoa[cont].sexo == "M")
+    {
+			 totalHomens++;
+    }
+  	cont++;
+  }
+  return totalHomens;
+}
+
+function totalMulheres(pessoa)
+{
+  var cont        = 0;
+  var totalMulheres = 0;
+  
+  while(cont < pessoa.length)
+  {  
+    if(pessoa[cont].sexo == "F")
+    {
+			 totalMulheres++;
+    }
+  	cont++;
+  }
+  return totalMulheres;
+}
+
+function mediaHomens(pessoa)
+{
+  var cont        = 0;
+  var totalHomens = 0;
+  var soma = 0;
+  var media = 0;
+  var contador = 0;
+  
+  while(cont < pessoa.length)
+  {  
+    if(pessoa[cont].sexo == "M")
+    {
+			 totalHomens++;
+       soma     = pessoa[cont].idade;  
+       contador = soma + contador;
+       
+			 //console.log("--------------------");
+			 //console.log("idade Homens: " + soma);
+			 //console.log("contador: " + contador);
+    }
+  	cont++;
+  }  
+  media = contador / totalHomens;
+  return media;
+}
+
+function mediaMulheres(pessoa)
+{
+  var cont        = 0;
+  var totalMulheres = 0;
+  var soma = 0;
+  var media = 0;
+  var contador = 0;
+  
+  while(cont < pessoa.length)
+  {  
+    if(pessoa[cont].sexo == "F")
+    {
+			 totalMulheres++;
+       soma     = pessoa[cont].peso;  
+       contador = soma + contador;
+       
+			 //console.log("--------------------");
+			 //console.log("idade mulheres: " + soma);
+			// console.log("contador: " + contador);
+    }
+  	cont++;
+  }  
+  media = contador / totalMulheres;
+  return media;
+}
+
+function pessoas(pessoa)
+{
+  //total de homens    
+	console.log("total de homens: " + totalHomens(pessoa));
+  
+  //media de idades dos homens    
+	console.log("media das idades dos homens: " + mediaHomens(pessoa));
+  
+  //media de idades dos mulheres    
+	console.log("media das idades dos mulheres: " + mediaMulheres(pessoa));
+  
+  //total de mULHERS    
+	console.log("total de Mulheres: " + totalMulheres(pessoa));
+}
+
+var pessoa = 
+[
+  {
+    idade: 20,
+    peso: 60.0,
+    sexo: "F"
+  },  
+  {
+    idade: 21,
+    peso: 60.1,
+    sexo: "F"
+  },    
+  {
+    idade: 22,
+    peso: 60.2,
+    sexo: "M"
+  },   
+  {
+    idade: 23,
+    peso: 60.3,
+    sexo: "F"
+  },
+  {
+    idade: 24,
+    peso: 60.4,
+    sexo: "F"
+  },
+  {
+    idade: 25,
+    peso: 60.5,
+    sexo: "M"
+  },
+  
+  {
+    idade: 26,
+    peso: 60.6,
+    sexo: "F"
+  },
+  {
+    idade: 27,
+    peso: 60.7,
+    sexo: "M"
+  },
+    {
+    idade: 28,
+    peso: 60.8,
+    sexo: "F"
+  },
+    {
+    idade: 29,
+    peso: 60.9,
+    sexo: "F"
+  },
+];
+
+var resposta = pessoas(pessoa);
