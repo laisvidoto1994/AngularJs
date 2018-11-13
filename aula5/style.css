@@ -1,0 +1,14 @@
+.imagemRedonda
+{
+    border-radius:50%;
+    overflow:hidden;
+    width:300px;
+    height:300px;
+    margin: 0 auto;
+}
+
+.form
+{
+    background: bisque;
+    padding: 10px 0px 0px 50%;
+}
