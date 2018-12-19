@@ -12,11 +12,11 @@ function maior(numero)
 
   if(numero > num)
   {
-	valor = true;
+    valor = true;
   }
    else
   {
-  	valor = false;
+    valor = false;
   }
   
   return valor;
