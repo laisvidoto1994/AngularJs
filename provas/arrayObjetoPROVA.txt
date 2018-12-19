@@ -1,6 +1,9 @@
-> Questão1
-> 1 - Maior que 10 
-> Crie uma função que descubra se um valor é maior ou menor que 10.
+/* --------------------------------------------------------------------
+* 	Questão1
+*	
+	1 - Maior que 10 
+	Crie uma função que descubra se um valor é maior ou menor que 10.
+*/
 
 function maior(numero)
 {
