@@ -1,8 +1,8 @@
 /* --------------------------------------------------------------------
-* 	Questão1
+* Questão1
 *	
-	1 - Maior que 10 
-	Crie uma função que descubra se um valor é maior ou menor que 10.
+   1 - Maior que 10 
+   Crie uma função que descubra se um valor é maior ou menor que 10.
 */
 
 function maior(numero)
@@ -12,11 +12,11 @@ function maior(numero)
 
   if(numero > num)
   {
-		valor = true;
+	valor = true;
   }
-	else
+   else
   {
-  		valor = false;
+  	valor = false;
   }
   
   return valor;
@@ -44,11 +44,11 @@ function par(numero)
 
   if(numero % 2 == 0)
   {
-	valor = true;
+     valor = true;
   }
   else
   {
-  	valor = false;
+     valor = false;
   }  
   
   return valor;
@@ -118,20 +118,20 @@ var resposta;
 
 function primo(numero)
 {
-	var divison = 2;
+  var divison = 2;
   
   while(divisor != numero)
   {
-  	if(numero % divisor == 0 && divisor != numero)
+    if(numero % divisor == 0 && divisor != numero)
     {
     	return false;
     }
     else
     {
-    console.log(divisor);
-    	divisor++;
+       console.log(divisor);
+       divisor++;
     }
-  	return true;
+    return true;
   }   
 }
 
@@ -174,13 +174,13 @@ resposta = carregar(numero);
 
 function contar(vetor)
 {
-	var cont = 0;
+  var cont = 0;
   var soma = 0;
   
   while(cont < vetor.length)
   {
-  	soma =  soma + vetor[cont];
-  	cont++;
+    soma =  soma + vetor[cont];
+    cont++;
   }  
   return soma;
 }
@@ -203,7 +203,7 @@ console.log("soma os itens do vetor: " + resposta);
 
 function contar(array)
 {
-	var maior = 0;
+  var maior = 0;
   var menor = array[0];
   var cont = 0;
   var indiceMaior = 0;  
@@ -213,16 +213,15 @@ function contar(array)
   {
     if(array[cont] > maior)
     {
-			maior = array[cont];
+      maior = array[cont];
       indiceMaior = cont;
     }
     if(array[cont] > menor)
     {
-			menor = array[cont];
+      menor = array[cont];
       indiceMenor = cont;
-    }
-    
-  	cont++;
+    }    
+    cont++;
   }  
 }
 
@@ -248,25 +247,22 @@ function qtdVogais(texto)
   
   while(cont < texto.length)
   {  	
-  	if(texto[cont]   == "a" || texto[cont] == "A"  
-    	|| texto[cont] == "e" || texto[cont] == "E"  
-    	|| texto[cont] == "i" || texto[cont] == "I" 
+    if(texto[cont]   == "a" || texto[cont] == "A"  
+      || texto[cont] == "e" || texto[cont] == "E"  
+      || texto[cont] == "i" || texto[cont] == "I" 
       || texto[cont] == "o" || texto[cont] == "O" 
       || texto[cont] == "u" || texto[cont] == "U")
     {
     	vogais++;
     }
-  	//valor = texto[cont];
-    
+    //valor = texto[cont];    
     cont++;
-  }
-  
+  }  
   return vogais;
 }
 
 var resposta = 0;
 var texto   = "Eva";
-
 var resposta = qtdVogais(texto);
 
 console.log("texto: " + texto);
@@ -294,9 +290,9 @@ function totalHomens(pessoa)
   {  
     if(pessoa[cont].sexo == "M")
     {
-			 totalHomens++;
+      totalHomens++;
     }
-  	cont++;
+    cont++;
   }
   return totalHomens;
 }
@@ -310,9 +306,9 @@ function totalMulheres(pessoa)
   {  
     if(pessoa[cont].sexo == "F")
     {
-			 totalMulheres++;
+	totalMulheres++;
     }
-  	cont++;
+    cont++;
   }
   return totalMulheres;
 }
@@ -329,15 +325,15 @@ function mediaHomens(pessoa)
   {  
     if(pessoa[cont].sexo == "M")
     {
-			 totalHomens++;
+       totalHomens++;
        soma     = pessoa[cont].idade;  
        contador = soma + contador;
        
-			 //console.log("--------------------");
-			 //console.log("idade Homens: " + soma);
-			 //console.log("contador: " + contador);
+	//console.log("--------------------");
+	//console.log("idade Homens: " + soma);
+	//console.log("contador: " + contador);
     }
-  	cont++;
+    cont++;
   }  
   media = contador / totalHomens;
   return media;
@@ -355,15 +351,15 @@ function mediaMulheres(pessoa)
   {  
     if(pessoa[cont].sexo == "F")
     {
-			 totalMulheres++;
+       totalMulheres++;
        soma     = pessoa[cont].peso;  
        contador = soma + contador;
        
-			 //console.log("--------------------");
-			 //console.log("idade mulheres: " + soma);
-			// console.log("contador: " + contador);
+ 	//console.log("--------------------");
+	//console.log("idade mulheres: " + soma);
+	// console.log("contador: " + contador);
     }
-  	cont++;
+    cont++;
   }  
   media = contador / totalMulheres;
   return media;
@@ -372,16 +368,16 @@ function mediaMulheres(pessoa)
 function pessoas(pessoa)
 {
   //total de homens    
-	console.log("total de homens: " + totalHomens(pessoa));
+  console.log("total de homens: " + totalHomens(pessoa));
   
   //media de idades dos homens    
-	console.log("media das idades dos homens: " + mediaHomens(pessoa));
+  console.log("media das idades dos homens: " + mediaHomens(pessoa));
   
   //media de idades dos mulheres    
-	console.log("media das idades dos mulheres: " + mediaMulheres(pessoa));
+  console.log("media das idades dos mulheres: " + mediaMulheres(pessoa));
   
   //total de mULHERS    
-	console.log("total de Mulheres: " + totalMulheres(pessoa));
+  console.log("total de Mulheres: " + totalMulheres(pessoa));
 }
 
 var pessoa = 
