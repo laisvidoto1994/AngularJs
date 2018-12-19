@@ -1,5 +1,8 @@
-﻿/*
-	Questão1
+/* --------------------------------------------------------------------
+* 	Questão1
+*	
+	1 - Maior que 10 
+	Crie uma função que descubra se um valor é maior ou menor que 10.
 */
 
 function maior(numero)
@@ -27,8 +30,11 @@ resposta = maior(numero);
 console.log("numero: " + numero);
 console.log("o numero é Maior que 10: " + resposta);
 
-/*
+/* --------------------------------------------------------------------
 	Questão2
+*	
+	2- Valor par ou ímpar 
+	Crie uma função que descubra se um valor é par ou ímpar.
 */
 
 function par(numero)
@@ -56,8 +62,14 @@ resposta = par(numero);
 console.log("numero: " + numero);
 console.log("é par: " + resposta);
 
-/*
+/* --------------------------------------------------------------------
 	Questão3
+*
+	3 - Somar dígitos 
+	Faça um programa para somar os dígitos de um inteiro
+	Sem utilizar recursos de string, ou seja, trabalhe apenas com tipos numéricos.
+	Somar dígitos significa que dados um número qualquer, exemplo, 2015, devemos somar seus dígitos:
+	exemplo: 2 + 0 + 1 + 5	
 */
 
 function somaDigito(numero) 
@@ -81,13 +93,25 @@ resposta = somaDigito(numero);
 console.log("numero digitado: " + numero);
 console.log("resposta na somar os digitos: " + resposta);
 
-/*
+/* --------------------------------------------------------------------
 	Questão4
+*
+	4 - MDC máximo divisor comum 
+	Faça um programa para calcular o MDC (máximo divisor comum) entre dois números.
+	Aconselho a utilizar o método de divisões sucessivas, pois você verá que a forma 
+	como costumamos resolver problemas matemáticos na mão nem sempre é o melhor
+	caminho quando estamos codificando.
 */
 
 
-/*
+
+/* --------------------------------------------------------------------
 	Questão5
+*
+	5 - Número primo 
+	Faça um programa para identificar se um número é primo.
+	Lembre-se que número primo, é um número natural, maior que 1, 
+	apenas divisível por si próprio e pela unidade.	
 */
 
 var resposta;
@@ -115,10 +139,13 @@ resposta = primo(19);
 
 console.log("numero é primo: " + resposta);
 
-
-
-/*
+ 
+/* --------------------------------------------------------------------
 	Questão6
+*
+	6- Algoritmo para carregar um vetor 
+	Escreva um algoritmo para carregar um vetor com os números de 1 (inclusive) 
+	a 5 (inclusive) em ordem crescente.
 */
 
 function carregar(numero)
@@ -138,9 +165,13 @@ var numero   = 5;
 resposta = carregar(numero);
 
 
-/*
+/* --------------------------------------------------------------------
 	Questão7
+*
+	7 - Algoritmo para somar vetor 
+	Crie uma função que retorna a soma de um vetor qualquer	
 */
+
 function contar(vetor)
 {
 	var cont = 0;
@@ -161,8 +192,13 @@ resposta = contar([1,2,3,4,5]);
 console.log("soma os itens do vetor: " + resposta);
 
 
-/*
+/* --------------------------------------------------------------------
 	Questão8
+*
+	8 - Maior e menor índice do vetor 
+	Dado um vetor qualquer sem valores repetidos, descubra qual é o 
+	índice do maior valor e o índice do menor valor.
+	Repare que eu quero o índice e não o valor daquele índice.	
 */
 
 function contar(array)
@@ -195,13 +231,14 @@ var resposta ;
 resposta = contar([1,2,3,4,5]);
 
 console.log("soma os itens do vetor: " + resposta);
+ 
 
-
-
-/*
+/* --------------------------------------------------------------------
 	Questão9
+*
+	9 - Contar vogais 
+	Faça um programa que descubra a quantidade de vogais de uma determinada string.
 */
-
 
 function qtdVogais(texto)
 {
@@ -236,17 +273,16 @@ console.log("texto: " + texto);
 console.log("Quantidade de Vogais: " + resposta);
 
 
-/*
+/* --------------------------------------------------------------------
 	Questão10
-*/
-
-
-/*
-Faça um programa que receba a idade, o peso e o sexo de 10 pessoas. Calcule e imprima:
-•	total de homens;
-•	total de mulheres;
-•	média das idades dos homens;
-•	média dos pesos das mulheres.
+*
+	10 – Trabalhando com Objetos
+	Faça um programa que receba a idade, o peso e o sexo de 10 pessoas. 
+	Calcule e imprima:
+	•	total de homens;
+	•	total de mulheres;
+	•	média das idades dos homens;
+	•	média dos pesos das mulheres.	
 */
 
 function totalHomens(pessoa)
