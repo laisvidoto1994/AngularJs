@@ -1,34 +1,34 @@
-﻿/* Avaliação - Academia de Front-End */
+/* Avaliação - Academia de Front-End */
 
 
 /* ------------------------------------------------------------------------
 	Questão 1
-Trocar o valor de duas variaveis
-Escreva um algoritmo que armazene o valor de 999 na variavel A e o valor 555 na variavel B.
-A seguir (utilizando apenas atribuição entre variaveis) troque os seus conteúdos fazendo com que o valor que
-está em A, passe para B e virce-versa.
+*
+	Trocar o valor de duas variaveis
+	Escreva um algoritmo que armazene o valor de 999 na variavel A e o valor 555 na variavel B.
+	A seguir (utilizando apenas atribuição entre variaveis) troque os seus conteúdos fazendo com que o valor que
+	está em A, passe para B e virce-versa.
 */
 
-var a = 999, 
-    b = 555,
-    x = 0;
+var a = 999; 
+var b = 555;
+var x = 0;
     
-  x = a;
-  
-  a = 0;
-  a = b;
-  
-  b = 0;
-  b = x;
+x = a;  
+a = 0;
+a = b;  
+b = 0;
+b = x;
 
 console.log("valor de A: " + a);
-console.log("valor de B: " + b);
+console.log("valor de B: " + b); 
 
 
 /* ------------------------------------------------------------------------
 	Questão 2
-O dobro de um numero qualquer
-Faça uma função para calcular o dobro
+*
+	O dobro de um numero qualquer
+	Faça uma função para calcular o dobro
 */
 
 function dobro(numero)
@@ -49,6 +49,8 @@ console.log("Dobro: " + resposta);
 
 /* ------------------------------------------------------------------------
 	Questão 3
+*
+
 */
 
 function antes(numero)
@@ -70,7 +72,6 @@ function depois(numero)
 }
 
 var numero = 20;
-
 var depois = depois(numero);
 var antes  = antes(numero);
 
@@ -80,6 +81,8 @@ console.log("depois: " + depois);
 
 /* ------------------------------------------------------------------------
 	Questão 4
+*
+
 */
 
 function qtdDiasMes(meses)
@@ -94,7 +97,7 @@ function qtdDiasMes(meses)
 
 var mes = 3;
 
-resposta = qtdDiasMes(mes);
+var resposta = qtdDiasMes(mes);
 
 console.log("mês informado: " + mes);
 console.log("resposta: " + resposta);
@@ -102,22 +105,24 @@ console.log("resposta: " + resposta);
 
 /* ------------------------------------------------------------------------
 	Questão 5
+*
+
 */
 
 function media(valor1, valor2, valor3)
 {
-	var cal = 0, 
-  	  resposta = 0;
+	var cal = 0; 
+  	var resposta = 0;
       
-  cal = valor1 + valor2 + valor3;
-  resposta = cal / 3;
+	cal = valor1 + valor2 + valor3;
+	resposta = cal / 3;
   
-  return resposta;
+	return resposta;
 }
 
-var valor1 = 6,
-		valor2 = 7,
-    valor3 = 6;
+var valor1 = 6;
+var valor2 = 7;
+var valor3 = 6;
 
 resposta = media(valor1, valor2, valor3);
 
@@ -128,18 +133,22 @@ console.log("media: " + resposta);
 
 /* ------------------------------------------------------------------------
 	Questão 6
+*
+
 */
+
 function dividisao(num1, num2)
 {
 	var resultado = 0;
-  resultado = num1 / num2;
-  return resultado;
+	
+	resultado = num1 / num2;
+	
+	return resultado;
 }
 
 
-var numero1 = 10, 
-		numero2 = 10;
-
+var numero1 = 10; 
+var numero2 = 10;
 var resposta1 = 0;
 var resposta2 = 0;
 var resposta3 = 0;
@@ -162,24 +171,26 @@ console.log("dividisao: " + resposta4);
 
 /* ------------------------------------------------------------------------
 	Questão 7
+*
+
 */
 
 function reajustes(salario, reajuste)
 {
-	var resultado = 0, 
-  		cal       = 0,
-      cal2      = 0;
+	var resultado = 0; 
+  	var cal       = 0;
+    var cal2      = 0;
       
-  cal       = salario * reajuste;
-  cal2      = cal / 100;
-  resultado = cal2 + salario;
+	cal       = salario * reajuste;
+	cal2      = cal / 100;
+	resultado = cal2 + salario;
   
-  return resultado;
+	return resultado;
 }
 
-var resposta = 0,
-		salario  = 1000,
-    reajuste = 15;
+var resposta = 0;
+var salario  = 1000;
+var reajuste = 15;
     
 console.log("salario: " + salario);
 console.log("reajuste: " + reajuste);
@@ -190,14 +201,16 @@ console.log("salario Reajustado: " + resposta);
 
 /* ------------------------------------------------------------------------
 	Questão 8
+*
+
 */
 
 function custoDeFabricacao(custoFabrica, percentualDistribuidor, percentualImposto)
 {
-	var resultado = 0, 
-  		custoFinal = 0,
-    	percentualDistribuidor1 = 0, 
-      percentualImposto1 = 0;
+	var resultado = 0; 
+  	var custoFinal = 0;
+    var percentualDistribuidor1 = 0; 
+    var percentualImposto1 = 0;
   
     percentualDistribuidor1 = percentualDistribuidor / 100;
     percentualImposto1      = percentualImposto / 100;
@@ -206,14 +219,14 @@ function custoDeFabricacao(custoFabrica, percentualDistribuidor, percentualImpos
                 (custoFabrica * percentualDistribuidor1) +
                 (custoFabrica * percentualImposto1);
 
-  resultado = custoFinal;
-  return resultado;
+	resultado = custoFinal;
+	return resultado;
 }
 
-var resposta               = 0,
-	  custoFabrica         = 10000,
-    percentualDistribuidor = 28,
-    percentualImposto      = 45;
+var resposta = 0;
+var custoFabrica = 10000;
+var percentualDistribuidor = 28;
+var percentualImposto = 45;
   
 console.log("custo Fabrica: " + custoFabrica);
 console.log("percentual Distribuidor: " + percentualDistribuidor);
@@ -221,18 +234,4 @@ console.log("percentual Imposto: " + percentualImposto);
   
 resposta = custoDeFabricacao(custoFabrica, percentualDistribuidor, percentualImposto);
 console.log("custo Final: " + resposta);
-
-/* ------------------------------------------------------------------------
-    Plus
-*/
-
-
-
-
-
-
-
-
-
-
-
+ 
