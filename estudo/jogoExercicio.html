@@ -1,0 +1,328 @@
+// ################################################################################//
+//https://opentechschool.github.io/js-beginners-1/sandbox/#invaders.js
+//JOGO
+// https://opentechschool.github.io/js-beginners-1/
+// ################################################################################//
+
+
+// A largura e altura da área de jogo
+var width  = 500;
+var height = 200;
+
+var contaBixo = 0;//qtd bixo morto
+var changueLevel = 0;
+var dif = 0.05;
+var tipo = "";
+
+// Uma matriz contendo os invasores atualmente atacando
+var invaders = [];
+
+// Array contendo balas que estão atualmente voando
+var bullets = [];
+
+// Definido como verdadeiro quando um invasor alcança a parte inferior da tela
+var gameOver = false;
+
+// A posição do jogador é baseada na posição do mouse. Porque nós
+// move a viewport, temos que 'mover' as coordenadas do mouse para o nosso próprio
+// coordena o sistema antes que possamos usá-los. 'mouseX' é fornecido por
+// o código auxiliar para este exemplo (descrito perto da parte inferior do
+// programa).
+function playerX()
+{
+  return mouseX + width / 2;
+}
+
+// Adicione um objeto de marcador na posição atual do jogador.
+function fireBullet() 
+{
+  bullets.push({x: playerX(), y: 10, alive: true});
+}
+
+// Chame o fireBullet toda vez que o botão esquerdo do mouse for pressionado.
+// 'setHandler' também é descrito perto da parte inferior do programa.
+setHandler("Mouse-Left", fireBullet);
+
+// Adiciona um novo objeto de invasor de espaço em uma posição aleatória ao longo do topo
+// da tela.
+function newInvader()
+{ 
+   tipo = "normal";
+  
+   if (Math.random() < 0.4)
+   {
+    	tipo = "super";
+   }
+   else if (Math.random() < 0.2)
+   {
+     	tipo = "superduper";
+   } 
+   
+  invaders.push
+    ({
+       x: Math.random() * width, 
+       y: height, 
+       alive: true,      
+       tipo: tipo
+    });
+}
+
+// Calcula a distância entre dois objetos. Ambos os objetos devem ter
+// propriedades x e y. Usa uma fórmula de Pythagoras de livro didático. Necessário para
+// ser capaz de dizer quando um invasor e uma bala colidem.
+function distance(obj1, obj2) 
+{
+  var dx = obj1.x - obj2.x, dy = obj1.y - obj2.y;
+  var retorno = 0;
+  retorno = Math.sqrt(dx * dx + dy * dy);  
+  return retorno;
+}
+
+// Isso vai
+// - Mova cada bala um pouco
+// - Desenhar cada marcador
+// - Mark balas que deixam a área do jogo como não mais vivo
+// - Verifique se uma bala atinge um invasor.
+// - Se isso acontecer, marque ambos e o invasor como morto
+function processBullets() 
+{
+  for (var b = 0; b < bullets.length; b = b + 1) 
+  {
+    var bullet = bullets[b];
+    bullet.y = bullet.y + 12;
+    drawBullet(bullet);
+    
+    if (bullet.y > height)
+      bullet.alive = false;
+    for (var i = 0; i < invaders.length; i = i + 1)
+    {
+      var invader = invaders[i];
+      
+      //BICHOS MORTOS
+      if (distance(bullet, invader) < 17)
+      {      
+        contaBixo++;
+        invader.alive = false;
+        bullet.alive  = false;
+      }
+    }
+  }
+}
+
+// Mova cada invasor um pouco para baixo. Desenhe-os. Quando alguém atinge o
+// parte inferior da área do jogo, defina gameOver como true e marque o invasor
+// como morto.
+function processInvaders() 
+{
+  for (var i = 0; i < invaders.length; i = i + 1) 
+  {
+    var invader = invaders[i];
+    invader.y = invader.y - 2;
+    drawInvader(invader);
+    
+    if (invader.y < 0)
+    {
+      gameOver      = true;
+      invader.alive = false;
+    }
+  }
+}
+
+// Usado para remover marcadores e invasores mortos no final de cada turn
+function removeDeadObjects(array) 
+{
+  var live = [];
+  for (var i = 0; i < array.length; ++i)
+  {
+    if (array[i].alive)
+      live.push(array[i]);
+  }
+  return live;
+}
+
+// Calcula qual Nivel o jogador está
+function level()
+{  
+  if(contaBixo == 3)
+  {
+    changueLevel++;
+    dif = dif + 0.05;
+    contaBixo = 0;
+  }  
+}
+ 
+// Processar uma única etapa do jogo (feito vinte vezes por segundo).
+function frame()
+{
+   // Há 5% de chance por turno, contanto que o jogo não termine,
+   // que um novo invasor seja adicionado.
+   // O ! operador significa 'não', o operador && significa 'e'.
+   // Então, isso diz 'se não gameOver e Math.random () for menor que 0.05'
+  if (!gameOver && Math.random() < 0.05)
+    
+    var txt = "texto: "+ tipo;
+  	text(-100, 10, txt);
+    
+  //crie novos bichinhos
+    newInvader();
+
+  // limpe á tela.
+  clear();
+  
+  // Torna 0,0 o canto inferior esquerdo da área do jogo
+    moveTo(-width / 2, -height / 2);
+  
+  // Desenhe uma linha no nível do solo.
+  color("orange");
+  line(0, 0, width, 0);
+
+  processBullets();
+  processInvaders();
+ 
+  //atualiza qtd de bichos mortos e seu level
+  level();
+  color("green");
+  var texto = "Qtd. Mortos: "+ contaBixo ;
+  
+  text(-100, 0, texto);
+  color("green");
+  var textos = "Level: "+ changueLevel ;
+  text(-100,200,textos);
+
+  // Descarte objetos mortos.
+  bullets = removeDeadObjects(bullets);
+  invaders = removeDeadObjects(invaders);
+
+  drawPlayer(playerX(), 0);
+  if (gameOver) 
+  {
+    color("red");
+    text(playerX() - 40, -25, "GAME OVER");
+  }
+}
+
+// Funções para desenhar os vários elementos no jogo.
+function drawInvader(invader) 
+{
+  moveTo(invader.x, invader.y);
+  
+  if (invader.alive == true && invader.tipo == "normal")
+  {
+    color("green");
+  }
+  else if(invader.alive == true && invader.tipo == "super")
+  {
+    color("violet");
+  	circle(0, 0, 20);
+  
+  	color("yellow");
+  	circle(-12, 8, 8);
+  	circle(12, 8, 8);
+  
+  	color("black");
+  	circle(-12, 8, 4);
+  	circle(12, 8, 4);
+  }
+  else if(invader.alive == true && invader.tipo == "superduper")
+  {
+    color("blue");
+  	circle(0, 0, 14);
+  
+  	color("yellow");
+  	circle(-12, 8, 8);
+  	circle(12, 8, 8);
+  
+  	color("black");
+  	circle(-12, 8, 4);
+  	circle(12, 8, 4);
+  }
+  else
+  {
+    color("orange");
+  	circle(0, 0, 14);
+  
+  	color("yellow");
+  	circle(-12, 8, 8);
+  	circle(12, 8, 8);
+  
+  	color("black");
+  	circle(-12, 8, 4);
+  	circle(12, 8, 4);
+  } 
+    
+  	goBack();
+}
+
+function drawPlayer(x, y) 
+{
+  moveTo(x, y);
+  
+  color("blue");
+  box(-20, 5, 40, 10);
+  
+  color("black");
+  box(-6, 15, 4, 14);
+  box(2, 15, 4, 14);
+  
+  goBack();
+}
+
+//construção dos tiros
+function drawBullet(bullet) 
+{
+  moveTo(bullet.x, bullet.y);
+  
+  //cor dos tiros
+  color("red");
+  lineWidth(5);//espeçura do tiro
+  line(-4, -4, -4, 4);//posição da 1ª linha do tiro
+  line(4, -4, 4, 4);  //posição da 2ª linha do tiro
+  
+  goBack();
+}
+
+function drawing()
+{
+  setInterval(frame, 50);
+}
+
+
+// Use a função setHandler para responder a entrada de tecla ou mouse.
+// setHandler ("Left", goLeft) - para chamar a função goLeft sempre
+// a seta para a esquerda é pressionada
+// setHandler ("U", startAccelerate, stopAccelerate) - um segundo
+// função pode ser dada, que será chamada quando a chave for
+// liberado novamente. As chaves das letras são nomeadas por letras maiúsculas.
+// Use os nomes "Mouse-Left", "Mouse-Right" e "Mouse-Middle" para
+// os botões do mouse. As variáveis ​​mouseX e mouseY fornecem
+// coordenadas atuais do mouse.
+
+// Estas são as funções antigas de desenho:
+//
+// color (string) - define a cor atual
+// lineWidth (number) - define a largura da linha
+// box (x, y, width, height) - desenhe uma caixa
+// circle (x, y, radius) - desenhe um círculo
+// line (x1, y1, x2, y2) - desenhe uma linha
+// text (x, y, string) - desenhe texto
+// clear () - limpa a tela
+// path (string) - desenhe uma linha complexa
+// Em uma descrição de linha, os seguintes comandos são válidos:
+// g x y - vai para o ponto x, y sem desenhar
+// l x y - desenha uma linha do ponto atual para o ponto x, y
+// c - desenha uma linha de volta ao início da linha
+// q x y cx cy - desenha uma curva para x, y, usando cx, cy as
+// 'ponto de controle' para determinar a curvatura
+//
+// fill () - preenche o caminho atual com a cor atual
+//
+// Coordenadas são interpretadas como se 0,0 é o centro do
+// tela. x é o eixo horizontal e y a vertical.
+// Positivo x vai para a direita, positivo y sobe.
+// Essas operações podem transformar o sistema de coordenadas:
+//
+// moveTo (x, y) - move a origem para x, y
+// rotate (degrees) - rotaciona as operações de desenho subseqüentes
+// por vários graus
+// escala (fator) - escala operações de desenho subseqüentes
+// goBack () - desfaz uma transformação
