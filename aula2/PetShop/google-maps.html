@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title>Busca de Cep</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+
+    <style>
+        #mapa {
+            height: 400px;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- scripts da Api Mapa -->
+    <script>
+        function initMap() {
+            var x = document.getElementById("myText").value;
+            console.log(x);
+
+            var latLng =
+            {
+                lat: -8.0820288,
+                lng: -34.9404221
+            };
+
+            //criando uma sobreposição da div ocupando o espaço dela com o mapa
+            var map = new google.maps.Map
+                (
+                document.getElementById('mapa'),
+                {
+                    zoom: 15,
+                    center: latLng
+                }
+                );
+
+            //definição da localização do pino vermelho no mapa
+            var marker = new google.maps.Marker
+                (
+                {
+                    position: latLng,
+                    map: map
+                }
+                );
+        }
+    </script>
+
+    <!-- https://console.cloud.google.com/navigation-error;errorUrl=%2Fgoogle%2Fmaps-apis%2Fapi-list%253Fhl%253Dpt-br%2526organizationId%253D%2526project%253Djavascript-treinamento%2526folder%253D?hl=pt-br&project=javascript-treinamento -->
+    <!-- key ativada no console.cloud -> Maps JavaScript API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv8P6S1SqN2X_lX9WGLSt3zmWfU6nWJsQ&callback=initMap">
+    </script>
+
+    <script>
+        function nova() {
+            location.href = "localizacao.html";
+        }
+    </script>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>Pet Shop</h1>
+        <ul class="nav">
+            <li>
+                <a href='index.html'>Home</a>
+            </li>
+            <li>
+                <a href="localizacao.html">Localização</a>
+            </li>
+            <li>
+                <a href="acessorios.html">Acessorios</a>
+            </li>
+            <li>
+                <a href="contato.html">Contatos</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Corpo da Pagina -->
+    <input style="background:red" class="botao" type="submit" value="voltar" onclick="nova()">
+
+    <h3>Localização</h3>
+
+    <input type="text" name="FirstName" id="myText">
+    <button onclick="initMap()">buscar</button>
+    </br>
+
+    <div id="mapa"></div>
+
+    <!-- Rodapé -->
+    <div class="rodape">
+        <h6>PetShop - Todos os direitos reservados 2018 - PetShop</h6>
+    </div>
+
+</body>
+
+</html>

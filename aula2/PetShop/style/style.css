@@ -1,0 +1,217 @@
+/*   */
+body{
+  /* plano_de_fundo-cor */
+  background: beige;
+  /* plano_de_fundo-imagem */
+  background-image: url(imagem/patas.jpg);
+  /* plano_de_fundo-posição */
+  background-position: top left;
+  /* plano_de_fundo- */
+  background-repeat: repeat-x;
+  /* margin encima, direita,embaixo,esquerda */
+  margin: 0px 0px 0px 0px;
+}
+
+/* PARAGRAFO */
+p{
+  /* cor_texto */
+  color: black;
+  /* fonte-tamanho */
+  font-size: 20px;
+  /* fonte-fonte */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+/* TITULO */
+h1{
+  /* cor_texto */
+  color:chartreuse;
+  /* texto-alinhamento=>justify ,right direita,left esquerda,center centro */
+  text-align:center;
+  /* margin encima, direita,embaixo,esquerda */
+  margin: 3px 3px 3px 3px;
+  /* texto-sobreamento=>posicao_para_direita_ou_esquerda   posicao_para_cima_ou_para_baixo   cor */
+  text-shadow: 3px 2px #000000;
+} 
+
+h2{
+  /* preenchimento=> tamanho_encima direita embaixo e esquerda  */
+  padding: 6px 3px 0 0;
+  /* cor_texto */
+  color:blue;
+  /* borda-espessura=>tamanho */
+  border-width: 2px;
+  
+}
+
+h3{
+  /* cor_texto */
+  color: #000000;
+  /* tamanho da fonte */
+  font-size: 20px;
+  /* texto-linha=>overline linha_de_cima,line-through linha_no_meio ,underline linha_embaixo ,underline overline linha_encima_e_embaixo*/
+  text-decoration: underline;
+  
+}
+
+h6{
+  /* cor_texto */
+  color:beige;
+  /* fonte-tamanho */
+  font-size: 15px;
+  /* preenchimento=> tamanho_encima direita embaixo e esquerda  */ 
+  padding: 0 35% 0 35%;
+  
+}
+
+
+/* LISTA */
+li{
+  font-size: 24px;
+}
+
+/* LISTA */
+ul li{
+  display: inline;
+  font-size: 24px;
+  /* margin encima, direita,embaixo,esquerda */
+  margin: 30px;
+}
+
+a{  
+  /*text-decoration: none;*/
+  color: black;
+  /* texto-alinhamento=>justify ,right direita,left esquerda,center centro */
+  text-align:right;
+}
+
+a:houver{
+  text-decoration:underline;
+  /* cor_texto */
+  color:#248383;
+}
+ 
+/* CABEÇALHO */
+.header{
+  /* plano_de_fundo-cor */
+  background:#006666;
+  /* preenchimento=> tamanho_encima direita embaixo e esquerda  */
+  padding: 0px;
+  display: flow-root;
+  
+}
+
+.header a{
+  /* cor_texto */
+  color: #000000;
+}
+
+.main-content{
+  width: 961px;
+  /* preenchimento=> tamanho_encima direita embaixo e esquerda  */
+  padding: 20px 20px 20px 20px;
+  border: 1px solid #000000;
+  /* margin encima, direita,embaixo,esquerda */
+  margin: 30px auto 0 auto;
+  /* plano_de_fundo-cor */
+  background: floralwhite;
+}
+
+.nav{
+  width: 900px;
+  /* margin encima, direita,embaixo,esquerda */
+  margin: auto;
+  /* preenchimento=> tamanho_encima direita embaixo e esquerda  */
+  padding: 0px 0 10px 0;
+}
+
+/* RODAPÉ */
+.rodape {
+  /* static|absolute|fixed|relative|sticky|initial|inherit */
+  position: inherit;
+  display: -webkit-box;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;/* Mesma Altura do Rodapé */
+  /* plano_de_fundo-cor */
+  background: #006666;
+  color: white;
+  display: block;
+  
+}
+
+
+.footer {  
+  display: -webkit-box;
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #006666;
+  color: white;
+  text-align: center;
+}
+
+label, input{
+  display: inherit;
+}
+
+label{
+  /* margem-inferior=>length,auto,initial,inherit */
+  margin-bottom: 10px;
+}
+
+button{
+  /* cor_texto */
+  color: aqua;
+  display: block;
+}
+
+.formulario{    
+  /* margin encima, direita,embaixo,esquerda */
+  margin: 1px;
+  /* preenchimento=> tamanho_encima direita embaixo e esquerda  */
+  padding: 50px 0 10px 0px;
+  left: 0;
+  /* emcima */
+  top: 50%;
+  width: 100%;
+  /* fonte-tamanho */
+  font-size: 18px;
+  /* borda-espessura=>tamanho */
+  border-width: 1px;
+  /* borda-cor */
+  border-color: #000000;
+}
+
+.main-content .formulario .test{
+   /* margin encima, direita,embaixo,esquerda */
+   margin: 10% 10% 10% 25%;
+}
+ 
+.formulario .cadastro{
+  width: 300px;
+  height: 200px; 
+  margin: auto;
+  background-color: antiquewhite;
+  padding:  0% 0% 10% 45%;
+  padding-left: 0%;
+}
+
+.formulario .cadastro .label{
+  color: #248383; 
+  font-size: 18px;
+}
+
+.formulario .cadastro .botao{
+  color: black;
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  width: 150px;
+  height: 30px;
+  background-color: palegreen;
+}
+
+
+
+
