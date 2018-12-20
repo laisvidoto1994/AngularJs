@@ -1,0 +1,43 @@
+<html>
+	<head>  
+	
+		<script type="text/javascript">	
+		
+			var counter = 1; 		
+		 
+			function selectFile(event)
+			{
+				 var selFile = event.target.files[0];
+				 var readFile = new FileReader();
+				 var contaner = "image" + counter;
+				 var imgLoc = document.getElementById(contaner);
+				 imgLoc.title = selFile.name;
+				 
+				 readFile.onLoad = function(event)
+				 {
+					imgLoc.src = event.target.result;
+				 }
+				 readFile.readAsDataURL(selFile);
+				 counter++;				 
+			} 
+		</script>
+		
+	</head>
+	<body>
+	
+		<h1>Utilização arquivos</h1> 
+		
+		<div id="div1">
+		
+			Input file:  		
+			<input type="file" onchange="selectFile(event)"> 
+			</ br>
+			
+			<div>
+				<img id="imagem1" widht="100px">
+				<img id="imagem2" widht="100px">
+				<img id="imagem3" widht="100px"> 
+			</div>
+		</div>
+	</body>
+</html>
