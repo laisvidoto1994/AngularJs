@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <script data-require="angularjs@1.6.4" data-semver="1.6.4" src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="myCtrl">
+<div class="header">
+    <div class="fav">
+        <div class="img-frame">
+            <img src="{{imagemEscolhida}}"/>
+        </div>
+        <h3>{{mensagem}}</h3>
+    </div>
+</div>
+<div>
+    <div class="card" id="j10" ng-class="{'caicai': jogador.caicai}"  ng-click="escolher(jogador.numero)"  ng-repeat="jogador in jogadores">
+        <div class="imagem">
+            <img src="{{jogador.imagemUrl}}" alt="teste"/>
+        </div>
+        <div class="card-body">
+            <div>
+                <label>Nome:</label><span class="nome"> {{jogador.nome}}</span>
+            </div>
+            <div>
+                <label>Gols:</label><span class="gols"> {{jogador.gols}}</span>
+            </div>
+            <div>
+                <label>numero:</label><span class="numero"> {{jogador.numero}}</span>
+            </div>
+        </div>
+        <div class="bola" ng-class="{'shine': jogador.efeitinho}"  ng-click="fazerGol(jogador); $event.stopPropagation();"></div>
+    </div>
+
+
+    <div class="card"  ng-click="escolher()" >
+        <div class="card-body">
+
+            <span>{{novoJogador.nome}}</span>
+            <div>
+                <input  placeholder="Nome" type="text" ng-model="novoJogador.nome"/>
+            </div>
+            <div>
+                <input placeholder="Gols" type="text" ng-model="novoJogador.gols"/>
+            </div>
+            <div>
+                <input placeholder="Numero" type="text" ng-model="novoJogador.numero"/>
+            </div>
+            <div>
+               <input placeholder="Url" type="text" ng-model="novoJogador.imagemUrl"/>
+            </div>
+
+            <button ng-click="adicionar(novoJogador)">Add</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="./src/ngindex.js"></script>
+</body>
+
+</html>
+
+</html>
