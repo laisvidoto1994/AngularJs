@@ -1,0 +1,45 @@
+<html>
+
+<head>
+	<script>		
+		#temp
+		{
+			widht: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</script>
+
+	<script type="text/javascript">		
+
+		function removerDiv(botaoClicado) {
+			if (botaoClicado.value === "Remove") {
+				botaoClicado = "Replace";
+				var content2 = document.getElementById("temp");
+				content2.parentNode.removeChild(content2);
+			}
+			else {
+				botaoClicado = "Remove";
+				var criandoNovamenteDiv = document.createElement('div');
+				criandoNovamenteDiv.id = 'temp';
+				document.body.appendChild(criandoNovamenteDiv);
+			}
+		} 
+	</script>
+
+</head>
+
+<body>
+
+	<h1>Utilização de javascript</h1>
+
+	<div id="div1">teste1
+
+		<input name="butao1" id="butao1" type="button" value="Remove" onclick="removerDiv(this)">
+
+		<div id="temp"></div>
+	</div>
+
+</body>
+
+</html>
