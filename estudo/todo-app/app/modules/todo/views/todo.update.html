@@ -1,0 +1,31 @@
+<div class="page-header">
+    <h1 ng-bind-html="vm.pageTitle"></h1>
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-lg-8">
+
+        <form action="" class="form-horizontal" name="formUser" novalidate>
+
+            <div class="form-group">
+                <input type="text" name="name" ng-model="vm.user.name" class="form-control" required placeholder="name"/>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" ng-model="vm.user.email" class="form-control" required placeholder="email"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="cpf" ng-model="vm.user.cpf" class="form-control" required placeholder="cpf"/>
+            </div>
+            <div class="form-group">
+                <input type="text" name="rg" ng-model="vm.user.rg" class="form-control" required placeholder="rg"/>
+            </div>
+            <div class="form-group">
+                <input type="number" name="qtdChildrens" ng-model="vm.user.qtdChildrens" class="form-control" placeholder="os pirraias"/>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-success" ng-click="vm.updateUser();" ng-disabled="formUser.$invalid">Atualizar</button>
+            </div>
+        </form>
+
+    </div>
+</div>
