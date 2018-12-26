@@ -1,6 +1,3 @@
-ul li{
-    color:blueviolet;
-  }
 
   /*configuração do paragrafo*/
 p{
@@ -8,17 +5,20 @@ p{
   border-right: 15px;
   border-bottom: 35px;
   border-left: 30px;
-
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  border-bottom: 3px;
- 
+  border-bottom: 3px; 
   border-color: blueviolet;
   display:inline;
 }
 
 ul li a{
   color:#f90;
+}
+
+/* tabela de catalogo de gatos */
+tr td ul li{
+  color:blueviolet;
 }
 
 /*configuração da imagen*/
@@ -28,11 +28,8 @@ img{
 }
 
 /*criando classe com suas propriedades*/
-
 .test h1{
   color:#f90;
 }
 
-
-
-  
+ 

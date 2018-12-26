@@ -1,26 +1,44 @@
 [
     {
-        "raca":"gato siamês",
+        "raca": "gato siamês",
+        "historia": "Estudiosos dizem que o gato Siamês é original da Tailândia, conhecido no Sudoeste Asiático como o gato feito para acompanhar reis, por ter postura e ser elegante. Mas com o passar dos anos, os siameses acabaram indo parar na Inglaterra, e de lá foram transportados para os outros países e continentes, e caíram nas graças do mundo inteiro, se tornando uma das raças de gatos mais famosas do mundo, juntamente com os Persas.",
+        "dados": "Siamês é uma das raças de gato mais populares do mundo, seus olhos azuis enormes e o pelo que começa claro e termina em degrade com o escuro chamam muita atenção de quem vê um gato siamês, ou que tem a oportunidade de chegar perto de um. Mas o que poucas pessoas sabem é que essa é uma das raças de gatos mais imprevisíveis que existem, e também uma das mais versáteis para se ter como companhia.",
+        "caracteristicas": "O peso ideal de um gato Siamês adulto é entre 3kg e 6kg, com a altura média de 20cm. Eles atingem a pelagem definitiva entre os 5 e 8 meses de idade, podendo criar pelos brancos entre os escuros conforme vão ficando idosos. O gatinho Siamês pode viver de 15 a 20 anos com saúde e agilidade, tudo vai depender da sua qualidade de vida.",
         "imagem": "https://t1.ea.ltmcdn.com/pt/images/9/9/4/img_como_saber_se_o_gato_e_siames_22499_paso_3_600.jpg"
     },
     {
-        "raca":"gato norueguês da floresta",
-        "imagem": "http://animais.culturamix.com/blog/wp-content/gallery/o-gato-noruegues-da-floresta-6/O-Gato-Noruegues-da-Floresta-17.jpg",  
+        "raca": "gato norueguês da floresta",
+        "historia": "Esta raça de gatos remonta de vários séculos. Eles geralmente aparecem em contos populares noruegueses e nas histórias, dizemos que estes gatos puxam a carruagem de Freya, uma das deusas mais importantes da mitologia nórdica, que representa o amor, a fertilidade e beleza.",
+        "dados": "Estes gatos atingem a maturidade aos cinco anos de idade e podem pesar entre 5kg e 7kg os machos, e as fêmeas não pesam mais do que 5kg.",
+        "caracteristicas": "Eles têm grandes olhos amendoados e a cabeça em forma de um triângulo equilátero, ajuda a dar um olhar único para esta espécie. Visto de lado, tem um perfil reto. Muitos associam o formato da face a uma pista de esqui.",        
+        "imagem": "http://animais.culturamix.com/blog/wp-content/gallery/o-gato-noruegues-da-floresta-6/O-Gato-Noruegues-da-Floresta-17.jpg"
     },
     {
-        "raca":"gato curl americano",
-        "imagem": "https://i.pinimg.com/236x/0c/2c/43/0c2c43117be2d5d623b26598f96e49b3--american-curl-curls.jpg" 
+        "raca": "gato curl americano",
+        "historia": "A história começou no verão de 1981, em Lakewood, Califórnia. Uma gatinha preta de pelo semi-longo com orelhas enroladas apareceu à porta da família Ruga. Joe inicialmente não queria ficar com a gatinha por isso não pretendia alimentá-la. No entanto, contra a sua vontade, a sua esposa Grace deixou-lhe comida na entrada. A partir deste momento a gatinha meiga e inteligente com orelhas invulgares entrou nas suas vidas e acabou por ser chamada Shulamith. Esta gatinha é a origem de toda a raça American Curl.",
+        "dados": "Um filhote American Curl poderá custar entre 890 a 2 600 € (R$ 1,5 a 3 mil)",
+        "caracteristicas": "O pelo é suave, macio e liso. Estas características são potenciadas pela falta do subpelo (as camadas internas), que torna a pelagem menos densa.",  
+        "imagem": "https://i.pinimg.com/236x/0c/2c/43/0c2c43117be2d5d623b26598f96e49b3--american-curl-curls.jpg"
     },
     {
-        "raca":"gato siberiano",
+        "raca": "gato siberiano",
+        "historia": "O Kotofei Cat Club, de Moscou, criou o primeiro padrão da raça com dois gatos como modelo, um azul e branco e outro manchado de marrom e branco. Em 1990, três gatos Siberianos foram importados para os EUA, e a TICA concedeu o aval para campeonatos em 1996. A American Cat Fanciers Association aceitou o Siberiano em 1999, sendo a Associação Cat Fanciers a última a aceitar a raça, em 2006.",
+        "dados": "Um gato como este é simpático e sem medo de desfrutar da companhia de uma vasta gama de animais de estimação, mas procura e gosta mesmo é da interação com humanos. Carinhoso e inteligente, gentil e calmo, este é o Siberiano. Este animal também se dá bem com crianças.",
+        "caracteristicas": "Porte: médio Esacala de saúde (1 a 5): 4 Escala de energia (1 a5): 5 Tipo de pelo: longo e em três tipos, o externo e o do meio, grossos e densos, e o subpelo, apertado e espesso. No inverno, o casaco é mais cheio e denso, mas no verão se torna mais curto. É resistente à água. Ao redor do pescoço o pelo é mais longo e forma uma espécie de juba Temperamento: gentil, brincalhão, afetuoso e ágil Expectativa de vida: entre 11 e 15 anos  Peso: 3,6 a 7,2",  
         "imagem": "https://i2.wp.com/www.universodegatos.com/wp-content/uploads/2016/11/Gato-Siberiano-personalidade-e-sau%CC%81de.jpg?resize=730%2C482"
     },
     {
-        "raca":"gato bombaim",
-        "imagem": "https://static.fofuxo.com.br/_upload/galleries/2013/04/09/bombay-5164b3b998487.jpg"  
+        "raca": "gato bombaim",
+        "historia": "O Bombay é uma raça que foi criada em Kentucky, nos Estados Unidos, por Nikki Homer, que nos anos cinquenta começou a trabalhar de forma constante, determinada a obter o seu gato preto com aparência de pantera negra. Para isso ela partiu de um cruzamento entre um Birmanese Sable e uma gata American Shorthair de olhos marcantes.",
+        "dados": "Apaixonados pela mini pantera negra, com um ar sensível e carinhoso, apesar de sempre pronta para explorar e caçar, novos criadores continuaram o trabalho que Nikki começou, garantindo que o Bombaim conseguisse ser uma das raças de gatos mais populares dos Estados Unidos, apesar de ser uma raça pouco conhecida na Europa.",
+        "caracteristicas": "Este gato musculoso de tamanho médio é ágil e brincalhão, se relacionando bem com todas as pessoas da família, inclusive crianças e pessoas estranhas. O Bombaim é um gato que é voltado para os humanos com quem vive, que vai recebê-los alegremente todos os dias na porta, sendo bastante carinhoso com todos.",  
+        "imagem": "https://static.fofuxo.com.br/_upload/galleries/2013/04/09/bombay-5164b3b998487.jpg"
     },
     {
-        "raca":"gato mau egípcio",
+        "raca": "gato mau egípcio",
+        "historia": "O Mau Egípcio é uma das raças mais antigas e a única naturalmente manchada. Uma pintura em papiro de 1100 a.C. mostra um gato manchado que decapita a serpente do mal, Apep; uma pintura em túmulo de 1400 a.C. retrata um gato manchado auxiliando um caçador egípcio a pegar um pato. Já em registros de 1580 a.C., um papiro cita um gato manchado que diz “Eu sou o gato que lutou perto da árvore de Persea em Annu na noite em que os inimigos da Neb-er-tcher foram destruídos”.",
+        "dados": "No início, o Mau Egípcio pode lhe parecer tímido e distante, mas não se engane: ele é intenso, leal e afetuoso. Adora ser o centro das atenções e faz da companhia dos seus tutores o melhor motivo para existir. É do tipo que vai adorar sua família o tempo todo, que gosta de ser incluso nas atividades da casa e é cheio de energia, com disposição para brincar, escalar e perseguir por horas. Embora não faça o tipo carente, anseia por carinho e afagos, principalmente quando está em repouso.",
+        "caracteristicas": "Porte: médio Escala de saúde (1 a 5): 4 Escala de energia (1 a 5): 4 Tipo de pelo: comprimento médio. Os gatos cuja pelagem é cor fumaça possuem pelo fino e sedoso, enquanto os prata e bronze possuem pelo denso e resiliente.Temperamento: elegante, alerta, leal, tímido e afetuoso Expectativa de vida: entre 12 e 15 anos Peso: 2,5 a 5 kg ",  
         "imagem": "http://www.guiaderacas.com.br/gatos/racas/egyptian-mau-02.jpg"
-    } 
+    }
 ]
