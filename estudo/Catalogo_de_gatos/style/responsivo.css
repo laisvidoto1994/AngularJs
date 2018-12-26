@@ -1,14 +1,13 @@
 body {
-    margin: 0;
-}
+    margin: 0; 
+  } 
+   
 ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-
-
+    background-color: #333; 
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -37,3 +36,53 @@ ul.topnav {
     ul.topnav li.right, 
     ul.topnav li {float: none;}
   }
+
+  /* efeito de ampliar ar imagem */
+  .grow:hover{ 
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+/* rotacionar imagem(girar) */
+.rotate:hover
+{
+    -webkit-transform: rotateZ(-30deg);
+    -ms-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+}
+
+/* arrendondar borda */
+.circle:hover{
+    border-radius:50%;
+}
+
+/* deixar o texto sombreado */
+.textosombra {
+  color:transparent;
+  text-shadow: 0 0 5px rgb(247, 15, 15);
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;	
+}  
+.textosombra:hover {
+  color: black;
+  text-shadow:none;
+}
+
+img.ca {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 250px;
+	opacity:0.65;
+	-moz-opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+ 
+.ajuste{
+  padding:0 16px;
+}

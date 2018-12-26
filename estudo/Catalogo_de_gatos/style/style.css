@@ -17,8 +17,25 @@ ul li a{
 }
 
 /* tabela de catalogo de gatos */
-tr td ul li{
-  color:blueviolet;
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+ 
+table td th {
+  border: 1px solid black;
+}
+
+table tr td ul li{
+  text-align: center;
+  color:blueviolet; 
+}
+
+table td img{
+  padding: 5%;
+  width: 300px;
+  height: 200px;
 }
 
 /*configuração da imagen*/
