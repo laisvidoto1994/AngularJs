@@ -1,3 +1,48 @@
+body {
+  width: 100%;
+  padding-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+.toolBar{
+  background-image: url('https://st2.depositphotos.com/1007692/10182/v/950/depositphotos_101822724-stock-illustration-cake-seamless-pattern.jpg');
+} 
+
+.imagemBolo{
+  padding: 20px;
+  width: 560px;
+  height: 300px;
+} 
+ 
+.box {
+  width: 390px;
+  height: auto;
+  float: left;
+}
+
+div#a-b {  
+  width: 1050px;
+  height: auto;
+  margin: auto;
+}
+
+div#a-b h3 {
+  text-align: left;
+  display: inline;
+
+}
+
+div#a-b ul li {
+  text-align: left;
+  display: block; 
+}
+
+.left {
+  margin-left: 30px;
+  width: 500px;
+}
+
 ul li{
-    color:red;
-  }
+  color:brown;
+}
+ 

@@ -26,7 +26,7 @@ app.controller("myCtrl", function($scope, $timeout) {
 
   };
   var jogador3 = {
-    imagemUrl: "https://futebolbahiano.org/wp-content/uploads/2018/06/futebolbahiano.org-marcelo-selecao-brasileira-1-678x381.jpg.pagespeed.ce.DasMJiM4oC.jpg",
+    imagemUrl: "https://abrilveja.files.wordpress.com/2017/08/marcelo-coletiva-selecao.jpg?quality=70&strip=info&w=680&h=453&crop=1",
     numero: 16,
     nome: "Marcelo",
     gols: 16,
