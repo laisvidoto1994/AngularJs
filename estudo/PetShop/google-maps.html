@@ -29,22 +29,17 @@
 
             //criando uma sobreposição da div ocupando o espaço dela com o mapa
             var map = new google.maps.Map
-                (
-                document.getElementById('mapa'),
-                {
+                (document.getElementById('mapa'), {
                     zoom: 15,
                     center: latLng
-                }
-                );
+                });
 
             //definição da localização do pino vermelho no mapa
             var marker = new google.maps.Marker
-                (
-                {
+                ({
                     position: latLng,
                     map: map
-                }
-                );
+                });
         }
     </script>
 
