@@ -5,8 +5,22 @@ body {
 }
 
 .toolBar{
-  background-image: url('https://st2.depositphotos.com/1007692/10182/v/950/depositphotos_101822724-stock-illustration-cake-seamless-pattern.jpg');
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  background-image: url('https://img.elo7.com.br/product/original/19586F4/papel-de-parede-plotagem.jpg');
 } 
+
+ul.toolBar li {float: left;}
+ul.toolBar li a {
+  display: block;
+  color: #333;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
 .imagemBolo{
   padding: 20px;
@@ -43,6 +57,7 @@ div#a-b ul li {
 }
 
 ul li{
+  
   color:brown;
 }
  
