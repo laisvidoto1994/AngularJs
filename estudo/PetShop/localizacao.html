@@ -1,40 +1,41 @@
 <html>
-  <head>
-    <title>Localização</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./style/style.css">   
-  </head>
 
-  <body>
-      <script >
-          function nova()
-          {
-            location.href="google-maps.html";
-          }
-        </script>
+<head>
+  <title>Localização</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./style/style.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+    </script>
+</head>
 
-    <!-- Cabeçalho -->
-    <div class="header">      
-      <h1>Pet Shop</h1>
-      <ul class="nav">
-        <li> <a href='index.html'>Home</a></li>
-        <li> <a href="localizacao.html">Localização</a></li>
-        <li> <a href="acessorios.html">Acessorios</a></li>
-        <li> <a href="contato.html">Contatos</a></li>        
-        <li> <a href="login.html">Login</a></li>
-        </ul>
-    </div>
+<body>
+  <script>
+    function nova() {
+      location.href = "google-maps.html";
+    }
+  </script>
 
-    <div class="main-content">
-        <input class="botao" type="submit" value="google maps" onclick="nova()">
-      <h3> Localização </h3>
-      <img src="imagem/maps.png" alt="mapa">
-    </div>
+  <!-- Cabeçalho -->
+  <script>
+    $(document).ready(function () {
+      $("#aba").load("abas.html");
+    });
+  </script>
 
-    <!-- Rodapé -->
-    
-    <footer class="rodape">
-        <h6> PetShop - Todos os direitos reservados 2018 - PetShop </h6>
-      </footer>
-  </body>
+  <div id="aba"></div>
+
+  <div class="main-content">
+    <input class="botao" type="submit" value="google maps" onclick="nova()">
+    <h3> Localização </h3>
+    <img src="imagem/maps.png" alt="mapa">
+  </div>
+
+  <!-- Rodapé -->
+
+  <footer class="rodape">
+    <h6> PetShop - Todos os direitos reservados 2018 - PetShop </h6>
+  </footer>
+</body>
+
 </html>
