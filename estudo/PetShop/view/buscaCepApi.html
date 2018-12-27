@@ -1,0 +1,78 @@
+<html ng-app="myApp">
+
+<head>
+  <title>Busca de Cep</title>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="../style/style.css">
+  <script type="text/javascript" src="../controllers/buscaCepApi.js"></script>
+</head>
+
+<body ng-controller="myCtrl">
+
+  <!-- Cabeçalho -->
+  <div id="aba"></div>
+
+  <form style="background:#248383" ng-submit="submit()" ng-controller="myCtrl">
+
+    <input type="button" value="voltar" style="background:red" onClick="nova()">
+    </br>
+
+    <label>Informe um cep:</label>
+    </br>
+
+    <input type="text" ng-model="data" name="data">
+    </br>
+    </br>
+
+    <input type="submit" id="submit" value="pesquisar" ng-submit="submit()">
+    </br>
+    <input type="submit" id="submit" value="nova consulta" ng-disabled="true">
+    </br>
+
+    <p ng-if="cepCorreto==true">cep digitado: {{data}}</p>
+    </br>
+
+    <table ng-if="cepCorreto==true">
+      <thead>
+        <th>cep</th>
+        <th>logradouro</th>
+        <th>complemento</th>
+        <th>bairro</th>
+        <th>localidade</th>
+        <th>uf</th>
+        <th>unidade</th>
+        <th>ibge</th>
+        <th>gia</th>
+      </thead>
+      <tbody>
+        <tr ng-controller="myCtrl">
+          <td ng-bind="cep"></td>
+          <td ng-bind="logradouro"></td>
+          <td ng-bind="complemento"></td>
+          <td ng-bind="bairro"></td>
+          <td ng-bind="localidade"></td>
+          <td ng-bind="uf"></td>
+          <td ng-bind="unidade"></td>
+          <td ng-bind="ibge"></td>
+          <td ng-bind="gia"></td>
+        </tr>
+      </tbody>
+    </table>
+    </br>
+
+    <p ng-if="cepIncorreto==true">
+      cep informado está Incorreto!
+    </p>
+
+  </form>
+
+  <!-- Rodapé -->
+  <div id="rodape"></div>
+
+</body>
+
+</html>
