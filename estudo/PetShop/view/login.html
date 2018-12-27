@@ -3,24 +3,26 @@
 <head>
   <title>Login</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="../style/style.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous">
     </script>
 </head>
 
 <body>
- 
+
   <script>
     $(document).ready(function () {
       $("#aba").load("abas.html");
-    });
+      $("#rodape").load("rodape.html");
+    });     
   </script>
 
+  <!-- Cabeçalho -->
   <div id="aba"></div>
 
   <div class="main-content">
-    <form class="formulario" style="background-image:url('imagem/pets2.jpg')">
+    <form class="formulario" style="background-image:url('../imagem/pets2.jpg')">
       <div class="test">
         <label for="tx_name">Nome</label>
         <input type="text" id="tx_name">
@@ -37,9 +39,8 @@
   </div>
 
   <!-- Rodape -->
-  <div class="rodape">
-    <h6>PetShop - Todos os direitos reservados 2018 - PetShop</h6>
-  </div>
+  <div id="rodape"></div>
+
 </body>
 
 </html>

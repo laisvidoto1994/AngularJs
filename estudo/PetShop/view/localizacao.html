@@ -3,7 +3,7 @@
 <head>
   <title>Localização</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="../style/style.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous">
     </script>
@@ -11,31 +11,28 @@
 
 <body>
   <script>
+    $(document).ready(function () {
+      $("#aba").load("abas.html");
+      $("#rodape").load("rodape.html");
+    });
+
     function nova() {
       location.href = "google-maps.html";
     }
   </script>
 
   <!-- Cabeçalho -->
-  <script>
-    $(document).ready(function () {
-      $("#aba").load("abas.html");
-    });
-  </script>
-
   <div id="aba"></div>
 
   <div class="main-content">
     <input class="botao" type="submit" value="google maps" onclick="nova()">
     <h3> Localização </h3>
-    <img src="imagem/maps.png" alt="mapa">
+    <img src="../imagem/maps.png" alt="mapa">
   </div>
 
   <!-- Rodapé -->
+  <div id="rodape"></div>
 
-  <footer class="rodape">
-    <h6> PetShop - Todos os direitos reservados 2018 - PetShop </h6>
-  </footer>
 </body>
 
 </html>

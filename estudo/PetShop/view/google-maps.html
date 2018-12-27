@@ -4,12 +4,10 @@
     <title>Busca de Cep</title>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <link rel="stylesheet" href="./style/style.css">
-
+    <link rel="stylesheet" href="../style/style.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous">
         </script>
-
     <style>
         #mapa {
             height: 400px;
@@ -19,6 +17,7 @@
 </head>
 
 <body>
+
     <!-- scripts da Api Mapa -->
     <script>
         function initMap() {
@@ -53,18 +52,18 @@
     </script>
 
     <script>
+
+        $(document).ready(function () {
+            $("#aba").load("abas.html");
+            $("#rodape").load("rodape.html");
+        });
+
         function nova() {
             location.href = "localizacao.html";
         }
     </script>
 
     <!-- Cabeçalho -->
-    <script>
-        $(document).ready(function () {
-            $("#aba").load("abas.html");
-        });
-    </script>
-
     <div id="aba"></div>
 
     <!-- Corpo da Pagina -->
@@ -79,9 +78,7 @@
     <div id="mapa"></div>
 
     <!-- Rodapé -->
-    <div class="rodape">
-        <h6>PetShop - Todos os direitos reservados 2018 - PetShop</h6>
-    </div>
+    <div id="rodape"></div>
 
 </body>
 

@@ -3,7 +3,7 @@
 <head>
   <title>Cadastro</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="../style/style.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous">
     </script>
@@ -12,6 +12,12 @@
 <body>
 
   <script>
+
+    $(document).ready(function () {
+      $("#aba").load("abas.html");
+      $("#rodape").load("rodape.html");
+    });
+
     function nova() {
       location.href = "teste3API.html";
     }
@@ -21,12 +27,7 @@
     }
   </script>
 
-  <script>
-    $(document).ready(function () {
-      $("#aba").load("abas.html");
-    });
-  </script>
-
+  <!-- Cabeçalho -->
   <div id="aba"></div>
 
   <!--  -->
@@ -87,9 +88,8 @@
   </form>
 
   <!-- Rodapé -->
-  <div class="rodape">
-    <h6>PetShop - Todos os direitos reservados 2018 - PetShop</h6>
-  </div>
+  <div id="rodape"></div>
+
 </body>
 
 </html>

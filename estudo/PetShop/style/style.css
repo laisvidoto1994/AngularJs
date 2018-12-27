@@ -3,7 +3,7 @@ body{
   /* plano_de_fundo-cor */
   background: beige;
   /* plano_de_fundo-imagem */
-  background-image: url(imagem/patas.jpg);
+  background-image: url(../imagem/patas.jpg);
   /* plano_de_fundo-posição */
   background-position: top left;
   /* plano_de_fundo- */
