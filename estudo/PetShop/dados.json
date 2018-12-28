@@ -21,11 +21,26 @@
     },
     {
         "id": "5",
+        "nome": "cama Sofa",
+        "imagem": "https://img.clasf.com.br/2016/06/06/Cama-Cachorro-Gato-Caminha-Pet-Porte-Tamanho-Mdio-20160606143720.jpg"
+    },
+    {
+        "id": "6",
+        "nome": "cama Sofa",
+        "imagem": "https://rockntech.com.br/wp-content/uploads/2015/04/cama-de-cachorro_6.jpg"
+    },
+    {
+        "id": "7",
+        "nome": "cama com osinho",
+        "imagem": "https://img.elo7.com.br/product/original/89BC7B/cama-para-caes-caes.jpg"
+    }, 
+    {
+        "id": "8",
         "nome": "Guia de Corda – Mosquetão com trava",
         "imagem": "https://assets.xtechcommerce.com/uploads/images/medium/092db484175d34e6086343250d5a996a.jpg"
     },
     {
-        "id": "6",
+        "id": "9",
         "nome": "Coleira para cachorro grande porte-Tórax 55 à 92cm-Rafs Azul",
         "imagem": "https://static.wmobjects.com.br/imgres/arquivos/ids/12910999-344-344/.jpg"
     }

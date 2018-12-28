@@ -6,8 +6,7 @@ app.controller('myCtrl', function ($scope, $http) {
         $("#rodape").load("rodape.html");
     });
 
-    $scope.nova = function () {
-
+    $scope.nova = function () { 
         location.href = "cadastro.html"
     }
 

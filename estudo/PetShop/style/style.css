@@ -234,4 +234,29 @@ button{
 .imagem4 {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4juNhbvRabk8VGUcR0CEEofeoz1jIyhbjgiOt3R0o3e79Fogg6A');
 }
- 
+.imagem5 {
+  background-image: url('https://img.clasf.com.br/2016/06/06/Cama-Cachorro-Gato-Caminha-Pet-Porte-Tamanho-Mdio-20160606143720.jpg');
+}
+
+
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
