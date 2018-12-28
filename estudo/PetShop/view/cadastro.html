@@ -35,56 +35,73 @@
 
     <input type="button" value="voltar" onClick="novo()" style="background:red">
 
+    <h2>Cadastro do Animal/Cliente</h2>
+
     <div style="margin:100px">
+
+      <h3>Cliente</h3>
       <ul>
         <li>
           <label>Nome</label>
           <input type="text" id="tx_name">
         </li>
-      </ul>
-      <ul>
+        <li>
+          <label>RG</label>
+          <input type="text" id="tx_rg">
+        </li>
+        <li>
+          <label>Enderreço:</label>
+        </li>
+        <li>
+          <input type="button" value="procurar" onClick="nova()">
+        </li>
+        </br>
+        </br>
+        <li>
+          <label>Telefone</label>
+          <input type="text" id="tx_telefone">
+        </li>
         <li>
           <label>E-mail</label>
           <input type="text" id="tx_email">
         </li>
-      </ul>
-      <ul>
         <li>
           <label>Password</label>
           <input type="text" id="tx_assword">
         </li>
       </ul>
-      </br>
-      <div>
-        <ul>
-          <li>
-            <label>Enderreço:</label>
-          </li>
-          <li>
-            <input type="button" value="procurar" onClick="nova()">
-          </li>
-        </ul>
-      </div>
+    </div>
+
+    <div style="margin:100px">
+
+      <h3>Animal</h3>
 
       <ul>
         <li>
+          <label>nome</label>
+          <input type="text" id="tx_animal_Nome">
+        </li>
+        <li>
+          <label>raça</label>
+          <input type="text" id="tx_animal_raca">
+        </li>
+        <li>
           <label>selecione o pet abaixo:</label>
         </li>
-        </br>
         <li>
           <select class="label">
             <option></option>
-            <option value="cachorro">cachorro</option>
-            <option value="gato">gato</option>
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
           </select>
-        </li>
-        </br>
-        </br>
-        <li>
-          <input class="botao" type="submit" value="cadastre">
         </li>
       </ul>
     </div>
+
+    <div style="margin:100px">
+      <input class="botao" type="submit" value="cadastre">
+    </div>
+
   </form>
 
   <!-- Rodapé -->

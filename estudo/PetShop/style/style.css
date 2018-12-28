@@ -1,9 +1,8 @@
 /*   */
 body{
   /* plano_de_fundo-cor */
-  background: beige;
-  /* plano_de_fundo-imagem */
-  background-image: url(../imagem/patas.jpg);
+  background: #dcecf5a1; 
+ 
   /* plano_de_fundo-posição */
   background-position: top left;
   /* plano_de_fundo- */
@@ -109,7 +108,7 @@ a:houver{
   /* margin encima, direita,embaixo,esquerda */
   margin: 30px auto 0 auto;
   /* plano_de_fundo-cor */
-  background: floralwhite;
+  background: #dcecf5a1;
 }
 
 .nav{
@@ -196,7 +195,7 @@ button{
   width: 300px;
   height: 200px; 
   margin: auto;
-  background-color: antiquewhite;
+  background-color: #dcecf5a1;
   padding:  0% 0% 10% 45%;
   padding-left: 0%;
 }
@@ -215,61 +214,24 @@ button{
   background-color: palegreen;
 }
 
-/*  TESTE */
-
-.wrapper {   
-  height: 100vh;
-  overflow-x: hidden;
-  perspective: 2px;
-  transform-style: preserve-3d;
-} 
-
-.section {
-  position: relative;
-  height: 50vh;
-  min-height: 500px;
-  transform-style: inherit; 
-}
-
-.section::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background-size: cover;
+.parallax  {
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center center;
-  transform: translateZ(-1px) scale(1.5);
+  background-size: cover;
 }
-
-.text{
-  position: absolute;
-  top: 25%;
-  width: 100%;
-  padding: 20px 0;
-  background-color: rgba(255, 255, 255,0.5);
-  color: white;
-  text-shadow: 0 0 5px #000;
-  font-size: 20px;
-  text-align: center;
-}
-
-.imagem1::before {
+ 
+.imagem1 {
   background-image: url('https://img.elo7.com.br/product/original/1976C46/cama-pet-cachorro-gato-batman-m-batman.jpg');
 }
-
-.imagem2::before {
+.imagem2 {
   background-image: url('https://www.petelegante.com.br/media/catalog/product/c/a/cama_para_cachorro_e_gato_rosa_estampa_florida.jpg');
 }
-
-.imagem3::before {
+.imagem3 {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBYVlpbUjSuiDv_eRYjENSIU4GIFqueXP9TmVqpjv4EX6uJr8qwA');
 }
-
-.imagem4::before {
+.imagem4 {
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4juNhbvRabk8VGUcR0CEEofeoz1jIyhbjgiOt3R0o3e79Fogg6A');
 }
-
+ 
