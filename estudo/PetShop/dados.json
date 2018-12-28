@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "nome": "cama do batman",
+        "imagem": "https://img.elo7.com.br/product/original/1976C46/cama-pet-cachorro-gato-batman-m-batman.jpg"
+    },
+    {
+        "id": "2",
+        "nome": "cama florida",
+        "imagem": "https://www.petelegante.com.br/media/catalog/product/c/a/cama_para_cachorro_e_gato_rosa_estampa_florida.jpg"
+    },
+    {
+        "id": "3",
+        "nome": "cama sofa",
+        "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBYVlpbUjSuiDv_eRYjENSIU4GIFqueXP9TmVqpjv4EX6uJr8qwA"
+    },
+    {
+        "id": "4",
+        "nome": "cama melancia",
+        "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4juNhbvRabk8VGUcR0CEEofeoz1jIyhbjgiOt3R0o3e79Fogg6A"
+    },
+    {
+        "id": "5",
+        "nome": "Guia de Corda – Mosquetão com trava",
+        "imagem": "https://assets.xtechcommerce.com/uploads/images/medium/092db484175d34e6086343250d5a996a.jpg"
+    },
+    {
+        "id": "6",
+        "nome": "Coleira para cachorro grande porte-Tórax 55 à 92cm-Rafs Azul",
+        "imagem": "https://static.wmobjects.com.br/imgres/arquivos/ids/12910999-344-344/.jpg"
+    }
+]
