@@ -2,6 +2,10 @@ body {
   width: 100%;
   padding-left: 10px;
   font-family: Arial, Helvetica, sans-serif;  
+  /*background-image: url('../img/estrelasGif.gif') ;*/ 
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .toolBar{
@@ -33,7 +37,7 @@ ul.toolBar li a {
   height: auto;
   float: left;
 }
-
+  
 div#a-b {  
   width: 1050px;
   height: auto;
@@ -60,4 +64,93 @@ ul li{
   
   color:brown;
 }
+
+.livro{
+  background-image: url('../img/livro.png') ;  
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px; 
+  width: 1400px;
+}
  
+.componenteEsquerda{ 
+  padding-top: 100px; 
+  padding-left: 168px; 
+  float:left; 
+  height: 348px;
+  width: 325px;
+}
+
+.componenteDireita{ 
+  padding-top: 100px; 
+  padding-left: 350px; 
+  float:left; 
+  height: 348px;
+  width: 325px;
+}
+
+
+.componenteDAEsquerda{ 
+  padding-top:50px;
+  height: 500px; 
+  width: 680px;  
+  float:left;
+}
+.componenteDADireita{ 
+  padding-top:50px;
+  padding-left: 40px; 
+  height: 500px; 
+  width: 650px; 
+  float:left;
+}
+
+.imagemReceita{
+  height: 200px; 
+  width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+/* O container geral define a perspectiva */  
+.flip-container { perspective: 1000; }  	
+
+   
+.flip-container, .front, .back {  	
+  width: 320px;  	
+  height: 480px;  
+}
+
+/* define a velocidade da transição */
+.flipper {  	
+  transition: 0.1s;  	
+  transform-style: preserve-3d;    	
+  position: relative;  
+}
+
+/* vira os containers frente e verso quando o mouse passa em cima */
+.flip-container:hover .flipper,  
+.flip-container.flip .flipper {  		
+  transform: rotateY(180deg);  	
+} 
+    
+/* esconde o verso durante a animação */
+.front, .back {  	
+  backface-visibility: hidden;    	
+  position: absolute;  	
+  top: 0;  	
+ left: 0;  
+}
+    
+/* frente posicionada sobre o verso */
+.front { z-index: 2;  }    
+
+/* verso inicialmente escondido */
+.back { transform: rotateY(180deg); }
