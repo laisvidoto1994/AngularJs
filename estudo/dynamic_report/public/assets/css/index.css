@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+  
+body{
+    overflow: hidden;
+    background:#cccccc;
+}
+
+.main-content
+{
+    overflow:auto;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#f2f2f2f2;
+}
+ 
+.confImagemLogo
+{ 
+    width: 100%;
+    max-width: 90px;
+    height: 100%; 
+    max-height: 90px; 
+    padding: 0;  
+}
+  
+.configMargins
+{
+    padding: 10px;
+}
+     
+.align{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.menu{
+    position: fixed;
+    z-index: 1;
+    width:10%;
+    height:100%;
+    background-color:#252e47;
+    padding:10px 0;
+    padding-left: 10px;
+    text-align: left;
+}
+ 
+.menu > p{
+    color:white;
+    text-transform: uppercase;
+}
+ 
+
+.colorIcon { 
+    font-size: 60px;
+    color:white;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+.content{   
+    width: auto;
+    padding-left: 10%;
+    margin: 0 5px;
+    text-align: center;
+}
+.content > h1{
+    color:black;
+}
+.box{
+    text-align: left;
+    width: 900px;
+    margin: 20px auto; 
+    background-color: white; 
+}
+ 
+md-checkbox.md-checked.blue .md-icon 
+{   
+    background-color: rgba(0, 102, 255, 0.87);
+}
+ 
+.checkbox
+{
+    margin-left: 10px;
+}
+ 
+.iconeErrocss
+{
+    font-size: 28px;
+    color: red;
+    position: absolute; 
+    bottom: 0; 
+}   
+
+.iconeSucesCss
+{
+    font-size:28px;
+    color: green;
+    position: absolute; 
+    bottom: 0; 
+}   
+
+.organizadiv
+{
+    margin-top: 15px;  
+    position: relative;
+    vertical-align: bottom;  
+    font-weight: bold;
+}
+
+.menssErroCss
+{
+    margin-left: 30px;
+}
+
+.corRed
+{
+   color:red;
+}
+ 
+.md-button.md-fab.md-mini
+ {
+    background-color: rgba(0, 102, 255, 0.87);
+    line-height: 62rem;
+    width: 62rem;
+    height: 62rem;
+    border-radius: 50%;
+}
+  
+/* Tabela Inicio */
+td, th 
+{
+    border: 1px dotted black;
+    text-align: center;
+}
+
+.td > h4
+{
+    margin: 20px;
+}
+ 
+th /* campos do Titulo da tabela */
+{
+    background-color: lightsteelblue;
+}
+ 
+tr:nth-child(even)  /* regras para impar */
+{
+    background-color: rgb(244, 245, 218);
+}
+
+tr:nth-child(odd) /* regras para par */
+{
+    background-color: white;
+} 
+ 
+.myBox /* Box styles */
+{
+    border-collapse: collapse;  
+    margin: 1% auto; 
+    padding: 5px;
+    width: 90%;
+    height: auto;
+    overflow: scroll;
+    margin-bottom: 10px;
+}
+/* Tabela Fim */  
+
+.tablediv{
+    padding-bottom: 25px;
+}
+
+/* Scrollbar styles Inicio */
+::-webkit-scrollbar 
+{
+    width: 12px;
+    height: 12px;
+}
+    
+::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 0 10px  rgba(37,46,71,0.9);
+    border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb 
+{
+    border-radius: 10px;
+    background:  rgba(37,46,71,0.9);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+    
+::-webkit-scrollbar-thumb:hover 
+{
+    background:  rgba(37,46,71,0.9);;
+}  
+/* Scrollbar styles Fim */
+ 
+
+
+
+
+
+
+

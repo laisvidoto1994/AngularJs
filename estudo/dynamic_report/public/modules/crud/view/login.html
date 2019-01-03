@@ -1,0 +1,67 @@
+<div class="content">
+
+    <h1> Login </h1>
+
+    <div class="box md-whiteframe-1dp">
+        <md-content class="md-padding">
+            <form ng-submit="$event.preventDefault()" name="userLogin">
+
+                <!-- email -->
+                <div layout="row">
+                    <md-input-container flex class="md-block">
+                        <label>Email</label>
+                        <input required type="email" name="userEmail" ng-model="loginCtrl.login.userEmail" 
+                        ng-required="true" minlength="10" maxlength="100" ng-pattern="/^[A-Za-z0-9._%+-]+@accenture.com$/" />
+                        <div ng-messages="userLogin.userEmail.$error" role="alert">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                Insira um endereço de e-mail accenture e que contenha de 10 a 100 caracteres.
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+
+                <!-- senha -->
+                <div layout="row"> 
+                    <md-input-container flex=50>
+                        <label>
+                            Senha
+                        </label>
+                        <input type="password" required minlength="6" name="userPass" ng-model="loginCtrl.login.userPass" ng-required="true" />
+                        <div ng-messages="userLogin.userPass.$error">
+                            <div ng-message="required">  Campo obrigatório. </div>
+                            <div ng-message="minlength"> No mínimo 6 caracteres. </div>
+                        </div>
+                    </md-input-container>
+
+                </div>
+
+                <!-- checkbox -->
+                <div layout="row" class="checkbox">
+                    <md-checkbox class="blue" ng-model="loginCtrl.isChecked" name="checkbox">manter-me conectado</md-checkbox>
+                </div>
+
+                <!-- botões-->
+                <div layout="row" layout-align="space-between">
+                    
+                    <!-- login -->
+                    <div>
+                        <md-button type="submit" class="md-raised md-primary" 
+                        ng-click="loginCtrl.login(loginCtrl.login)" ng-disabled="userLogin.$invalid">Entrar</md-button>
+                    </div>
+
+                    <!-- Cadastre-se -->
+                    <a href="/register">
+                        <md-button class="md-raised md-primary">Cadastre-se</md-button>
+                    </a>
+
+                </div>
+
+                <!-- erros na tela -->
+                <div class="organizadiv">
+                    <b class="material-icons iconeErrocss" ng-if="loginCtrl.iconeErroLogin">warning</b>
+                    <b class="menssErroCss" ng-bind="loginCtrl.erros"></b>
+                </div>
+            </form>
+        </md-content>
+    </div>
+</div>

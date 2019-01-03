@@ -1,0 +1,73 @@
+<div ng-controller="RegisterCtrl as registerCtrl" class="content">
+
+    <h1>
+        Cadastro
+    </h1>
+
+    <div class="box md-whiteframe-1dp">
+
+        <md-content class="md-padding">
+
+            <form ng-submit="$event.preventDefault()" name="userRegister">
+
+                <!-- Email -->
+                <div layout="row">
+                    <md-input-container flex class="md-block">
+                        <label> Email</label>
+                        <input required type="email" name="userEmail" ng-model="register.userEmail" ng-required="true" minlength="10" maxlength="100"
+                            ng-pattern="/^[A-Za-z0-9._%+-]+@accenture.com$/" />
+                        <div ng-messages="userRegister.userEmail.$error" role="alert">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                Insira um endereço de e-mail accenture e que contenha de 10 a 100 caracteres.
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+
+                <!-- Senha -->
+                <div layout="row">
+                    <md-input-container flex=50>
+                        <label> Senha </label>
+                        <input type="password" required minlength="6" name="userPass" ng-model="register.userPass" ng-required="true" />
+                        <div ng-messages="userRegister.userPass.$error">
+                            <div ng-message="required"> Campo obrigatório. </div>
+                            <div ng-message="minlength"> No mínimo 6 caracteres. </div>
+                        </div>
+                    </md-input-container>
+
+                    <!-- Confirmação de Senha -->
+                    <md-input-container flex=50>
+                        <label> Confirmar Senha </label>
+                        <input type="password" required ng-pattern="register.userPass" ng-model="register.userPassConfirm" name="userPassConfirm"
+                            ng-required="true" />
+                        <div ng-messages="userRegister.userPassConfirm.$error">
+                            <div ng-message="required"> Campo obrigatório. </div>
+                            <div ng-message="pattern"> Senhas não batem. </div>
+                        </div>
+                    </md-input-container>
+                </div>
+
+                <!-- Botão Cadastrar Usuário-->
+                <div>
+                    <md-button type="submit" class="md-raised md-primary" ng-click="registerCtrl.register(register)" ng-disabled="userRegister.$invalid">Cadastrar</md-button>
+                </div>
+
+                <!-- Menssagens de Tela -->
+                <div class="organizadiv">
+
+                    <!-- E-mail já cadastrado -->
+                    <b ng-if="registerCtrl.iconeErroRegister">
+                        <b class="material-icons iconeErrocss">warning</b>
+                        <b class="menssErroCss" ng-bind="registerCtrl.erroCadastro"></b>
+                        Falha ao cadastrar esse email, caso ocorra novamente,
+                        <a class="corRed" href="mailto:jefferson.penna@accenture.com">
+                            <i>
+                                <u>contate o adminstrador!</u>
+                            </i>
+                        </a>
+                    </b>
+                </div>
+            </form>
+        </md-content>
+    </div>
+</div>

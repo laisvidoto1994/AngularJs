@@ -1,0 +1,69 @@
+<div class="content" ng-controller="HomeCtrl as homeCtrl">
+
+    <h1>Home</h1>
+
+    <div class="box md-whiteframe-1dp">
+ 
+        <div layout="row" layout-align="space-between">
+        
+            <a href="/listaUsuarios">
+                <md-button  class="md-raised md-primary" ng-show="homeCtrl.tipoUsuarioVisivel">Lista de Usuários</md-button>
+            </a>                        
+            
+            <md-button type="submit" class="md-raised md-primary" ng-show="homeCtrl.tipoUsuarioVisivel">Criar Relatório</md-button>
+           
+            <!-- CORRIGIR FUNÇÃO -> $onAuthStateChanged -->
+            <a href="/login">
+                <md-button type="submit" class="md-raised md-primary" ng-click="homeCtrl.sair()">Logout</md-button>
+            </a>
+        </div>
+
+        <div layout="row" layout-align="space-between" class="tablediv ">
+
+            <table class="myBox">  
+                <tr>
+                    <th>
+                        <h3>id</h3>
+                    </th>
+                    <th>
+                        <h3>Tipo de Grafico</h3>
+                    </th>
+                    <th>
+                        <h3>Relatórios</h3>
+                    </th>
+                    <th>
+                        <h3>Ações</h3>
+                    </th>
+                </tr>
+
+                <tr ng-repeat="data in homeCtrl.reports">
+                
+                    <td>
+                        <h4 ng-bind="data.$id"></h4>
+                    </td>
+
+                    <td>
+                        <h4 ng-bind="data.type"></h4>
+                    </td>
+                    <td>
+                        <h4 ng-bind="data.nome"></h4>
+                    </td>
+    
+                    <td> 
+                        <md-button class="md-fab md-mini" >
+                            <md-icon class="material-icons" md-font-icon="visibility">visibility</md-icon>
+                        </md-button>
+                        
+                        <md-button class="md-fab md-mini" ng-if="homeCtrl.tipoUsuarioVisivel">
+                            <md-icon class="material-icons"  md-font-icon="create">create</md-icon>
+                        </md-button>
+
+                        <md-button class="md-fab md-mini" ng-if="homeCtrl.tipoUsuarioVisivel">
+                            <md-icon class="material-icons" md-font-icon="delete">delete</md-icon>
+                        </md-button> 
+                    </td>
+                </tr>  
+            </table>  
+        </div>
+    </div> 
+</div>

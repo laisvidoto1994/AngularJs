@@ -1,0 +1,143 @@
+<div class="content">
+
+    <h1>  Novo Funcionário </h1>
+
+        <div class="box md-whiteframe-1dp">
+
+            <md-content class="md-padding">
+
+                <md-button type="submit" class="md-raised md-primary" ng-click="authObj.$signOut()">Logout</md-button>
+ 
+                <form ng-submit="$event.preventDefault()" name="userForm">
+
+                    <p>
+                        Preencha corretamente os campos abaixo.
+                    </p>
+
+                    <div layout-gt-sm="row">
+                        
+                        <md-input-container flex=50>
+                            <label>
+                                Nome
+                            </label>
+                            <input type="text" required name="firstName" ng-model="form.firstName" ng-required="true"/>
+                            <div ng-messages="userForm.firstName.$error">
+                                <div ng-message="required">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                        </md-input-container>
+
+                        <md-input-container flex=50>
+                                <label>
+                                    Sobrenome
+                                </label>
+                                <input type="text" required name="lastName" ng-model="form.lastName" ng-required="true"/>
+                                <div ng-messages="userForm.lastName.$error">
+                                    <div ng-message="required">
+                                        Campo obrigatório.
+                                    </div>
+                                </div>
+                        </md-input-container>
+
+                    </div>
+
+                    <div layout="row">
+
+                        <md-input-container flex="20">
+                            <label>
+                                Área
+                            </label>
+                            <md-select required name="area" ng-model="form.area" ng-click="form.area" ng-required="true" md-selected-text="getSelectedTextArea()">
+                                <md-optgroup label="Área">
+                                    <md-option ng-repeat="area in areas" ng-value="area">{{area}}</md-option>
+                                </md-optgroup>                                    
+                            </md-select>
+                            <div ng-messages="userForm.area.$error">
+                                <div ng-message="required">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                        </md-input-container>
+
+                        <md-input-container  flex="20">
+                            <label>
+                                Nível
+                            </label>
+                            <md-select  required name="level" ng-model="form.level" ng-click="form.level" ng-required="true" md-selected-text="getSelectedTextLevel()">
+                                <md-optgroup label="Nível">
+                                    <md-option ng-repeat="level in levels" ng-value="level">Nível {{level}}</md-option>
+                                </md-optgroup>
+                            </md-select>
+                            <div ng-messages="userForm.level.$error">
+                                <div ng-message="required">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                        </md-input-container>
+                        
+                        <md-input-container flex-gt-xs>
+                                <label>
+                                        Data de Entrada
+                                </label>
+                            <md-datepicker required name="entryDate" ng-model="form.entryDate" ng-required="true" md-placeholder="xx/xx/xx" md-open-on-focus></md-datepicker>
+                            <div ng-messages="userForm.entryDate.$error">
+                                <div ng-message="required">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                        </md-input-container>
+
+                    </div>
+
+                    <div layout="row">
+
+                        <md-input-container flex=40>
+                            <label>
+                                Projeto
+                            </label>
+                            <input type="text" required name="project" ng-model="form.project" ng-required="true"/>
+                            <div ng-messages="userForm.project.$error">
+                                <div ng-message="required">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                        </md-input-container>
+
+                        <md-input-container  flex="40">
+                                <label>
+                                    Tecnologia
+                                </label>
+                                <md-select  required name="technology" ng-model="form.technology" ng-click="form.technology" ng-required="true" md-selected-text="getSelectedTextTechnology()">
+                                    <md-optgroup label="Tecnologia">
+                                        <md-option ng-repeat="technology in technologies" ng-value="technology">{{technology}}</md-option>
+                                    </md-optgroup>
+                                </md-select>
+                                <div ng-messages="userForm.technology.$error">
+                                    <div ng-message="required">
+                                        Campo obrigatório.
+                                    </div>
+                                </div>
+                            </md-input-container>
+
+                        <md-input-container flex=20>
+                            <label>
+                                Carga Horária
+                            </label>
+                            <input type="number" required name="workload" ng-model="form.workload" ng-required="true"/>
+                            <div ng-messages="userForm.workload.$error">
+                                <div ng-message="required">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                        </md-input-container>
+
+                    </div>                     
+
+                    <div>
+                        <md-button type="submit" class="md-raised md-primary" ng-click="alert('aa')" ng-disabled="userForm.$invalid">Enviar</md-button>
+                    </div>                 
+                </form>
+            </md-content>
+        </div>
+    </div>

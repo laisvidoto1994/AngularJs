@@ -1,0 +1,47 @@
+<div class="content" ng-controller="ListaUsuarioController as listaUsuarioController">
+    <h1> Lista de Usuários do Sistema </h1>
+    <form ng-submit="$event.preventDefault()" name="listUser">
+
+        <table class="myBox">
+            <!-- Cabeçalho da Tabela  -->
+            <tr>
+                <th>
+                    <h3>E-mail</h3>
+                </th>
+                <th>
+                    <h3>Admin</h3>
+                </th>
+                <th>
+                    <h3>Ações</h3>
+                </th>
+            </tr>
+
+            <!-- Registros da Tabela -->
+            <tr ng-repeat="usuario in listaUsuarioController.usuarios">
+
+                <td>
+                    <h4 ng-bind="usuario.email"></h4>
+                </td>
+
+                <td>
+                    <md-checkbox ng-model="usuario.selecionado" ng-disabled="!listaUsuarioController.usuarios[$index].disabled" 
+                    ng-init="listaUsuarioController.inicio(usuario)" class="blue">Admin</md-checkbox>
+                </td>
+
+                <td>
+                    <md-button class="md-fab md-mini" ng-click="listaUsuarioController.updateUser(usuario, listaUsuarioController.usuarios[$index].selecionado)">
+                        <md-icon class="material-icons" md-font-icon="save">save</md-icon>
+                    </md-button>
+
+                    <md-button class="md-fab md-mini" ng-click="listaUsuarioController.isAdmin($index)">
+                        <md-icon class="material-icons" md-font-icon="create">create</md-icon>
+                    </md-button>
+
+                    <md-button class="md-fab md-mini" ng-if="listaUsuarioController.deletado">
+                        <md-icon class="material-icons" md-font-icon="delete">delete</md-icon>
+                    </md-button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

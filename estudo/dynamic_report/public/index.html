@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8" />
+    <title>LEM</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-material/angular-material.min.css" />
+</head>
+
+<body>
+
+    <div class="main-content">
+
+        <!-- Barra Lateral -->
+        <ul class="menu md-whiteframe-4dp">
+
+            <li class="configMargins">
+                <center>
+                    <img src="assets/img/logo.PNG" alt="Logo" class="confImagemLogo"></img>
+                </center>
+            </li>
+ 
+            <li class="configMargins">
+                <md-icon class="material-icons colorIcon" md-font-icon="home">home</md-icon>
+                <a href="/">home</a>
+            </li>
+
+            <li class="configMargins">
+                <md-icon class="material-icons colorIcon" md-font-icon="equalizer">equalizer</md-icon>
+                <a href="/">Dashboard</a>
+            </li> 
+  
+        </ul>
+
+        <!-- Telas -->
+        <div class="align">
+            <div ui-view></div>
+        </div>
+  
+    </div>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Angularjs -->
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script src="node_modules/angular-material/angular-material.min.js"></script>
+    <script src="node_modules/angular-messages/angular-messages.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="node_modules/firebase/firebase-app.js"></script>
+    <script src="node_modules/firebase/firebase-auth.js"></script>
+    <script src="node_modules/firebase/firebase-database.js"></script>
+    <script src="node_modules/angularfire/dist/angularfire.min.js"></script>
+
+    <!-- Modulos Centrais da Aplicação -->
+    <script src="modules/app.js"></script>
+    <script src="modules/router.js"></script>
+    <script src="modules/config.js"></script>
+
+    <!-- Controllers -->
+    <script src="modules/crud/controllers/homeController.js"></script>
+    <script src="modules/crud/controllers/formController.js"></script>
+    <script src="modules/crud/controllers/loginController.js"></script>
+    <script src="modules/crud/controllers/registerController.js"></script>
+    <script src="modules/crud/controllers/listaUsuarioController.js"></script>
+
+    <!-- Factories -->
+    <script src="modules/crud/factories/authFactory.js"></script>
+
+    <!-- Services -->
+    <script src="modules/crud/services/authService.js"></script>
+</body>
+
+</html>
