@@ -28,10 +28,10 @@
           <input type="text" ng-model="data" name="data">
         </li>
         <li>
-          <input type="submit" id="submit" value="pesquisar" ng-submit="submit()">
+          <input type="submit" id="submit" value="pesquisar" ng-submit="submit()" ng-model="checked">
         </li>
         <li>
-          <input type="submit" id="submit" value="nova consulta" ng-disabled="true">
+          <input type="submit" id="submits" value="nova consulta" ng-submit="remover()" ng-disabled="btnStatus()" ng-model="checked2">
         </li>
         <li>
           <p ng-if="cepCorreto==true">cep digitado: {{data}}</p>

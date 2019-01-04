@@ -6,7 +6,7 @@ app.controller('myCtrl', function ($scope, $http) {
         $("#rodape").load("rodape.html");
     });
 
-    $scope.nova = function () { 
+    $scope.nova = function () {
         location.href = "cadastro.html"
     }
 
@@ -26,7 +26,7 @@ app.controller('myCtrl', function ($scope, $http) {
                     $scope.cepIncorreto = false;
                     $scope.data = response.data;
                     var x = [$scope.data];
-  
+
                     $scope.cep = x[0].cep;
                     $scope.logradouro = x[0].logradouro;
                     $scope.complemento = x[0].complemento;
@@ -37,9 +37,22 @@ app.controller('myCtrl', function ($scope, $http) {
                     $scope.ibge = x[0].ibge;
                     $scope.gia = x[0].gia;
                 }
+                $scope.checked = true;
+                $scope.checked2 = false;
             }, function myError(response) {
                 $scope.cepIncorreto = true;
                 $scope.myWelcome = response.statusText;
             });
     };
+
+    $scope.checked = false;
+    $scope.checked2 = true;
+
+    $scope.btnStatus = function () {
+        return !($scope.checked == true);
+    }
+
+    $scope.remover = function () {
+        $scope.data = "";
+    }
 });
