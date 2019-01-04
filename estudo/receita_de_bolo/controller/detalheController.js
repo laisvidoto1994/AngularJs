@@ -2,21 +2,18 @@
 
     'use strict';
 
-    var DetalheCtrl = function ($scope, $http, servico) {
+    var DetalheCtrl = function ($scope) {
 
         var vm = this;
-
-        /*  */
-        var refs = servico.getGsonServe();
-
+  
         function _init() {
 
         };
-
         _init();
-    }
+    };
 
-    angular.module("myApp")
-        .controller("DetalheCtrl", ['$scope', '$http', 'servico', DetalheCtrl]);
+    // ['$scope', HomeCtrl]-> o home é á variavel criada lá em cima, por isso não tem aspas 
+    angular.module('myApp', []).controller('DetalheCtrl', ['$scope', DetalheCtrl]);
 
 }());
+

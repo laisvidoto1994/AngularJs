@@ -2,20 +2,27 @@
 
     'use strict';
 
-    var authService = function ($http, $firebaseArray, $firebaseObject, $firebaseAuth, $state) {
+    var servicoService = function ($http) {
 
         var vm = this;
 
-        var service = {
-            getGsonServe: _getGsonServe,
+        var services = {
+            getGsonServe: _getGsonServe
         };
-        return service;
+        return services;
 
         /** 
         *  
         */
         function _getGsonServe() {
-
+            $http.get("http://localhost:3000/db")
+                .success(function (data) {
+                    console.log(data);
+                    return data;
+                })
+                .error(function (data) {
+                    console.log("ERROR: " + data);
+                });
         }
 
         function _init() {
@@ -24,10 +31,6 @@
 
         _init();
     }
-
-    //dependencias
-    angular.module('myApp').service('servico', ['$http', servico]);
-
-    //referenciando á propio serviço e deixando disponivel
-    angular.module("myApp").service("servico", servico);
+ 
+    angular.module('myApp', []).service('servicoService', ['$scope', servicoService]);
 }());

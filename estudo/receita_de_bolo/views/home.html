@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="../style/style.css"> 
+  <title>1º Teste</title>
+  <link rel="stylesheet" href="../style/style.css">
 </head>
 
-<body>
+<body ng-controller="HomeCtrl">
 
   <ul class="toolBar">
     <li>
@@ -22,6 +22,7 @@
     </li>
   </ul>
 
+  <h1>{{teste}}</h1>
 
   <h1>Detalhe da Receita</h1>
   <h2>Bolo Festivo</h2>
@@ -30,8 +31,8 @@
 
   <p>
     <a href='https://www.receitasnestle.com.br/receitas/bolo-festivo'>Bolo</a>
-    com massa de Chocolate em Pó DOIS FRADES  com calda de mel, recheio cremoso de amêndoas, coberto com Chocolate
-    NESTLÉ CLASSIC e decorado com amêndoas praliné
+    com massa de Chocolate em Pó DOIS FRADES com calda de mel, recheio cremoso de amêndoas, coberto com Chocolate NESTLÉ CLASSIC
+    e decorado com amêndoas praliné
   </p>
 
   <div id="a-b">
@@ -124,7 +125,13 @@
 
   </div>
 
-</body>
+  <!-- Angularjs -->
+  <script type="text/javascript" src="../node_modules/angular/angular.js"></script>
+  <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
 
+  <!-- Controllers -->
+  <script type="text/javascript" src="../controller/homeController.js"></script>
+
+</body>
 
 </html>
