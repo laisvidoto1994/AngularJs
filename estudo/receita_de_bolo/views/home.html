@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>1º Teste</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <script data-require="angular.js@1.2.18" data-semver="1.2.18" src="http://code.angularjs.org/1.2.18/angular.min.js"></script>
+  <script data-require="angular-ui-bootstrap@0.11.0" data-semver="0.11.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
   <link rel="stylesheet" href="../style/style.css">
 </head>
 
@@ -22,108 +25,94 @@
     </li>
   </ul>
 
-  <h1>{{teste}}</h1>
-
-  <h4>{{teste2}}</h4>
-
   <h1>Detalhe da Receita</h1>
-  <h2>Bolo Festivo</h2>
 
-  <img class="imagemBolo" src="https://www.receitasnestle.com.br/images/default-source/recipes/bolo_festivo.jpg?sfvrsn=0" alt="Bolo Festivo">
+  <div>
 
-  <p>
-    <a href='https://www.receitasnestle.com.br/receitas/bolo-festivo'>Bolo</a>
-    com massa de Chocolate em Pó DOIS FRADES com calda de mel, recheio cremoso de amêndoas, coberto com Chocolate NESTLÉ CLASSIC
-    e decorado com amêndoas praliné
-  </p>
+    <pagination boundary-links="true" max-size="3" items-per-page="itemsPerPage" total-items="todos.length" ng-model="currentPage"
+      ng-change="pageChanged()">
+    </pagination>
 
-  <div id="a-b">
+    <h4>Total de Receitas: {{todos.length}}</h4>
 
-    <div class="box">
-      <h3>Ingredientes</h3>
-      <h4>Massa:</h4>
-      <ul>
-        <li>6 ovos</li>
-        <li>1 xícara (chá) de açúcar</li>
-        <li>1 xícara (chá) de NINHO Forti+ UHT Integral</li>
-        <li>2 xícaras (chá) de farinha de trigo</li>
-        <li>meia xícara (chá) de Chocolate em Pó NESTLÉ DOIS FRADES</li>
-        <li>1 colher (sopa) de fermento em pó</li>
-      </ul>
+    <ul ng-repeat="todo in filteredTodos">
+      <h1 ng-bind="todo.name"></h1>
+      <img class="imagemBolo" ng-src="{{todo.photo}}">
+      <p ng-bind="todo.descricao"></p>
 
-      <h4>Recheio:</h4>
-      <ul>
-        <li>1 Leite MOÇA® (lata ou caixinha)</li>
-        <li>2 gemas peneiradas</li>
-        <li>2 colheres (sopa) de amido de milho</li>
-        <li>1 xícara (chá) de amêndoas torradas picadas</li>
-        <li>1 lata de NESTLÉ Creme de Leite</li>
-      </ul>
+      <div id="a-b">
+        <div class="box">
 
-      <h4>Cobertura:</h4>
-      <ul>
-        <li>170 g de Chocolate CLASSIC Meio Amargo</li>
-        <li>1 lata de NESTLÉ Creme de Leite</li>
-      </ul>
+          <h3>Ingredientes</h3>
+          <h4 ng-show="todo.ingredientesMassa[0]">Massa:</h4>
+          <ul ng-repeat="ingredientes in todo.ingredientesMassa">
+            <li ng-bind="ingredientes"></li>
+          </ul>
 
-      <h4>Calda:</h4>
-      <ul>
-        <li>3 colheres (sopa) de mel</li>
-      </ul>
+          <h4 ng-show="todo.ingredientesRecheio[0]">Recheio:</h4>
+          <ul ng-repeat="ingredientes in todo.ingredientesRecheio">
+            <li ng-bind="ingredientes"></li>
+          </ul>
 
-      <h4>Praliné:</h4>
-      <ul>
-        <li>2 xícaras (chá) de amêndoas em lascas torradas</li>
-        <li>1 xícara (chá) de açúcar</li>
-        <li>meia colher (chá) de fermento em pó</li>
-        <li>2 colheres (sopa) de Chocolate em Pó NESTLÉ DOIS FRADES</li>
-      </ul>
-    </div>
+          <h4 ng-show="todo.ingredientesCobertura[0]">Cobertura:</h4>
+          <ul ng-repeat="ingredientes in todo.ingredientesCobertura">
+            <li ng-bind="ingredientes"></li>
+          </ul>
 
-    <div class="box left">
-      <h3>MODO DE PREPARO</h3>
-      <h4>Massa:</h4>
-      <p>
-        Em uma batedeira, bata os ovos e acrescente o açúcar. Despeje o Leite NINHO aos poucos, sem parar de bater. Desligue a batedeira
-        e incorpore, delicadamente, a farinha de trigo peneirada com o Chocolate em Pó DOIS FRADES e o fermento em pó. Despeje
-        em uma forma redonda (28 cm de diâmetro), untada com manteiga e polvilhada com farinha de trigo, e leve ao forno
-        médio (180°C), preaquecido, por cerca de 30 minutos. Retire do forno e deixe esfriar.
-      </p>
+          <h4 ng-show="todo.ingredientesCalda[0]">Calda:</h4>
+          <ul ng-repeat="ingredientes in todo.ingredientesCalda">
+            <li ng-bind="ingredientes"></li>
+          </ul>
 
-      <h4>Recheio:</h4>
-      <p>
-        Em uma panela, misture o Leite MOÇA com o Leite NINHO, as gemas e o amido de milho. Leve ao fogo baixo, mexendo sempre, até
-        engrossar. Cozinhe por cerca de 2 minutos e retire do fogo. Junte as amêndoas e o Creme de Leite NESTLÉ e deixe esfriar.
-      </p>
+          <h4 ng-show="todo.ingredientesPraline[0]">Praliné:</h4>
+          <ul ng-repeat="foi in todo.ingredientesPraline" ng-model="checked" ngShow>
+            <li ng-bind="foi"></li>
+          </ul>
 
-      <h4>Cobertura:</h4>
-      <p>
-        Derreta o Chocolate NESTLÉ CLASSIC em banho-maria e junte o Creme de Leite NESTLÉ. Misture bem e reserve.
-      </p>
+        </div>
+        <div class="box left">
 
-      <h4>Calda:</h4>
-      <p>
-        Em uma tigela, misture o mel com 1 xícara (chá) de água e reserve.
-      </p>
+          <h3>MODO DE PREPARO</h3>
 
-      <h4>Praliné:</h4>
-      <p>
-        Em uma panela de fundo largo, coloque as amêndoas com o açúcar, o fermento em pó, o Chocolate em Pó DOIS FRADES e meia xícara
-        (chá) de água. Leve ao fogo médio, mexendo de vez em quando por cerca de 5 minutos ou até secar parcialmente. Comece
-        a mexer vigorosamente, sem parar, até secar bem. Retire do fogo e espalhe sobre uma assadeira até esfriar.
-      </p>
+          <h4 ng-show="todo.modoDePreparoMassa[0]">Massa:</h4>
+          <ul>
+            <p ng-bind="todo.modoDePreparoMassa"></p>
+          </ul>
 
-      <h4>Montagem:</h4>
-      <p>
-        Corte o bolo ao meio e umedeça cada metade com a calda de mel. Coloque o recheio sobre uma das massas e finalize com a massa
-        restante. Decore com a cobertura reservada e leve à geladeira até o momento de servir.
-      </p>
+          <h4 ng-show="todo.modoDePreparoRecheio[0]">Recheio:</h4>
+          <ul>
+            <p ng-bind="todo.modoDePreparoRecheio"></p>
+          </ul>
 
-      <h4>DICA:</h4>
-      <p>
-        Se desejar, decore com raspas de Chocolate NESTLÉ CLASSIC® Meio Amargo ou amêndoas em lascas torradas.
-      </p>
-    </div>
+          <h4 ng-show="todo.modoDePreparoCobertura[0]">Cobertura:</h4>
+          <ul>
+            <p ng-bind="todo.modoDePreparoCobertura"></p>
+          </ul>
+
+          <h4 ng-show="todo.modoDePreparoPraline[0]">Praliné:</h4>
+          <ul>
+            <p ng-bind="todo.modoDePreparoPraline"></p>
+          </ul>
+
+          <h4 ng-show="todo.modoDePreparoCalda[0]">Calda:</h4>
+          <ul>
+            <p ng-bind="todo.modoDePreparoCalda"></p>
+          </ul>
+
+          <h4 ng-show="todo.modoDePreparoMontagem[0]">Montagem:</h4>
+          <ul>
+            <p ng-bind="todo.modoDePreparoMontagem"></p>
+          </ul>
+
+          <h4 ng-show="todo.modoDePreparoDica[0]">Dica:</h4>
+          <ul>
+            <p ng-bind="todo.modoDePreparoDica"></p>
+          </ul>
+
+        </div>
+      </div>
+
+    </ul>
 
   </div>
 
@@ -133,7 +122,6 @@
 
   <!-- Controllers -->
   <script type="text/javascript" src="../controller/homeController.js"></script>
-
 
 </body>
 

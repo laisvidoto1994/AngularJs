@@ -7,11 +7,34 @@
             "photo": "https://www.receitasnestle.com.br/images/default-source/recipes/bolo_festivo.jpg?sfvrsn=0",
             "ingredientes": [
                 {
-                    "massa": "6 ovos|1 xícara (chá) de açúcar|1 xícara (chá) de NINHO Forti+ UHT Integral|2 xícaras (chá) de farinha de trigo|meia xícara (chá) de Chocolate em Pó NESTLÉ DOIS FRADES|1 colher (sopa) de fermento em pó",
-                    "recheio": "1 Leite MOÇA® (lata ou caixinha)|2 gemas peneiradas|2 colheres (sopa) de amido de milho|1 xícara (chá) de amêndoas torradas picadas|1 lata de NESTLÉ Creme de Leite",
-                    "cobertura": "170 g de Chocolate CLASSIC Meio Amargo|1 lata de NESTLÉ Creme de Leite",
-                    "calda": "3 colheres (sopa) de mel",
-                    "praline": "2 xícaras (chá) de amêndoas em lascas torradas|1 xícara (chá) de açúcar|meia colher (chá) de fermento em pó|2 colheres (sopa) de Chocolate em Pó NESTLÉ DOIS FRADES"
+                    "massa": {
+                        "0": "6 ovos",
+                        "1": "1 xícara (chá) de açúcar",
+                        "2": "1 xícara (chá) de NINHO Forti+ UHT Integral",
+                        "3": "2 xícaras (chá) de farinha de trigo",
+                        "4": "meia xícara (chá) de Chocolate em Pó NESTLÉ DOIS FRADES",
+                        "5": "1 colher (sopa) de fermento em pó"
+                    },
+                    "recheio": {
+                        "0": "1 Leite MOÇA® (lata ou caixinha)",
+                        "1": "2 gemas peneiradas",
+                        "2": "2 colheres (sopa) de amido de milho",
+                        "3": "1 xícara (chá) de amêndoas torradas picadas",
+                        "4": "1 lata de NESTLÉ Creme de Leite"
+                    },
+                    "cobertura": {
+                        "0": "170 g de Chocolate CLASSIC Meio Amargo",
+                        "1": "1 lata de NESTLÉ Creme de Leite"
+                    },
+                    "calda": {
+                        "0": "3 colheres (sopa) de mel"
+                    },
+                    "praline": {
+                        "0": "2 xícaras (chá) de amêndoas em lascas torradas",
+                        "1": "1 xícara (chá) de açúcar",
+                        "2": "meia colher (chá) de fermento em pó",
+                        "3": "2 colheres (sopa) de Chocolate em Pó NESTLÉ DOIS FRADES"
+                    }
                 }
             ],
             "modoDePreparo": [
@@ -33,11 +56,23 @@
             "photo": "https://www.receitasnestle.com.br/images/default-source/recipes/pudim-de-leite-moc-_c2_baa_13423_alta.jpg",
             "ingredientes": [
                 {
-                    "massa": "1 Leite MOÇA® (lata ou caixinha)|2 medidas (da lata) de NINHO Forti+ UHT Integral|3 ovos",
-                    "recheio": "",
-                    "cobertura": "",
-                    "calda": "1 xícara (chá) de açúcar",
-                    "praline": ""
+                    "massa": {
+                        "0": "1 Leite MOÇA® (lata ou caixinha)",
+                        "1": "2 medidas (da lata) de NINHO Forti+ UHT Integral",
+                        "2": "3 ovos"
+                    },
+                    "recheio": {
+                        "0": ""
+                    },
+                    "cobertura": {
+                        "0": ""
+                    },
+                    "calda": {
+                        "0": "1 xícara (chá) de açúcar"
+                    },
+                    "praline": {
+                        "0": ""
+                    }
                 }
             ],
             "modoDePreparo": [
@@ -59,11 +94,32 @@
             "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXpqzRAP1hv5gKK2rgceRI4lcEioyi8DxOkWau4gmsECVS9iUK1Q",
             "ingredientes": [
                 {
-                    "massa": "meia xícara (chá) de manteiga|1 xícara (chá) de açúcar|4 gemas|2 xícaras (chá) de farinha de trigo|1 xícara (chá) de Nescau 2.0|1 colher (sopa) de fermento em pó|1 e meia xícara (chá) de suco de laranja|4 claras|manteiga para untar|farinha de trigo para polvilhar",
-                    "recheio": "",
-                    "cobertura": "2 xícaras (chá) de açúcar de confeiteiro|4 colheres (sopa) de Nescau 2.0|6 colheres (sopa) de suco de laranja",
-                    "calda": "",
-                    "praline": ""
+                    "massa": {
+                        "0": "meia xícara (chá) de manteiga",
+                        "1": "1 xícara (chá) de açúcar",
+                        "2": "4 gemas",
+                        "3": "2 xícaras (chá) de farinha de trigo",
+                        "4": "1 xícara (chá) de Nescau 2.0",
+                        "5": "1 colher (sopa) de fermento em pó",
+                        "6": "1 e meia xícara (chá) de suco de laranja",
+                        "7": "4 claras",
+                        "8": "manteiga para untar",
+                        "9": "farinha de trigo para polvilhar"
+                    },
+                    "recheio": {
+                        "0": ""
+                    },
+                    "cobertura": {
+                        "0": ""
+                    },
+                    "calda": {
+                        "0": "2 xícaras (chá) de açúcar de confeiteiro",
+                        "1": "4 colheres (sopa) de Nescau 2.0",
+                        "2": "6 colheres (sopa) de suco de laranja"
+                    },
+                    "praline": {
+                        "0": ""
+                    }
                 }
             ],
             "modoDePreparo": [
@@ -85,11 +141,29 @@
             "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJXs-TJvYI0x5M1rUiZwJZkswyDdZJqUmaadKDwIZcK4UU8nO77w",
             "ingredientes": [
                 {
-                    "massa": "200 g de manteiga|3 ovos|1 xícara (chá) de Nescau 2.0|meia xícara (chá) de açúcar|2 xícaras (chá) de farinha de trigo|1 xícara (chá) de NINHO Forti+ UHT Integral|meia colher (sopa) de fermento em pó|1 colher (chá) de bicarbonato de sódio",
-                    "recheio": "",
-                    "cobertura": "1 pote de cream cheese (150g)|meia xícara (chá) de Nescau 2.0",
-                    "calda": "",
-                    "praline": ""
+                    "massa": {
+                        "0": "200 g de manteiga",
+                        "1": "3 ovos",
+                        "2": "1 xícara (chá) de Nescau 2.0",
+                        "3": "meia xícara (chá) de açúcar",
+                        "4": "2 xícaras (chá) de farinha de trigo",
+                        "5": "1 xícara (chá) de NINHO Forti+ UHT Integral",
+                        "6": "meia colher (sopa) de fermento em pó",
+                        "7": "1 colher (chá) de bicarbonato de sódio"
+                    },
+                    "recheio": {
+                        "0": ""
+                    },
+                    "cobertura": {
+                        "0": "1 pote de cream cheese (150g)",
+                        "1": "meia xícara (chá) de Nescau 2.0"
+                    },
+                    "calda": {
+                        "0": ""
+                    },
+                    "praline": {
+                        "0": ""
+                    }
                 }
             ],
             "modoDePreparo": [

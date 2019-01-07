@@ -6,10 +6,11 @@
 
         var vm = this;
 
-        var services = {
+       /* var services = {
             getGsonServe: _getGsonServe
         };
         return services;
+        */
 
         /** 
         *  
@@ -18,7 +19,7 @@
             $http({ method: "GET", url: "http://localhost:3000/db" })
                 .then(function mySuccess(response) {
                     var jsonDados = [];
-
+                    /*
                     for (var prop in response.data.db) {
                         var dados = [];
                         dados.id = response.data.db[prop].id;
@@ -42,6 +43,9 @@
  
                         jsonDados.push(dados);
                     }
+                    */
+
+                    jsonDados = response.data.db;
                     console.log(jsonDados);
                     return jsonDados;
                 })
@@ -57,5 +61,6 @@
         _init();
     }
 
-    angular.module('myApp', []).service('servicoService', ['$scope', servicoService]);
+    angular.module('myApp', [])
+        .service('servicoService', ['$http', servicoService]);
 }());
