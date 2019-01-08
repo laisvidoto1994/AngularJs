@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="../style/style.css">
   <script src="../node_modules/angular/angular.js"></script>
+  <script src="../controller/suggestController.js"></script>
   <script src="script.js"></script>
 </head>
 
-<body>
+<body ng-controller="suggestCtrl">
 
   <ul class="toolBar">
     <li>
@@ -27,12 +28,22 @@
   <h3>Cadastro de Receitas</h3>
 
   <form action="">
-    <label>nome da receita</label>
-    <input type="text" placeholder="oi"><br/><br/>
-    <label>ingredientes</label>
-    <input type="text" placeholder="oi"><br/><br/>
-    <label>modo de preparo</label>
-    <input type="text" placeholder="oi"><br/><br/>
+    <label>Nome da Receita</label>
+    <input type="text" placeholder="oi">
+    <br/>
+    <br/>
+    <label>Ingredientes</label>
+    <input type="text" placeholder="oi">
+    <br/>
+    <br/>
+    <label>Modo de Preparo</label>
+    <input type="text" placeholder="oi">
+    <br/>
+    <br/>
+    <label>Carregue á imagem para sua receita</label>
+    <input type='file' accept='image/*' onchange="angular.element(this).scope().openFile(event)" ng-model="image">
+    <br>
+    <img id='output' class="imagemBolo" ng-src="{{photo}}">
   </form>
 
 </body>

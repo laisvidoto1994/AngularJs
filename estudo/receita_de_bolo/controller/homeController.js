@@ -24,7 +24,7 @@
                         $scope.todos = [];
                         for (let i = 0; i < jsonDados.length; i++) {
 
-                            //string vazia
+                            //validação de string vazia
                             if (!jsonDados[i].ingredientes[0].praline[0]) {
                                 console.log(jsonDados[i].ingredientes[0].praline);
                                 $scope.checked = false;

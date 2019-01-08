@@ -29,9 +29,13 @@ ul.toolBar li a {
 .imagemBolo{
   padding: 20px;
   width: 560px;
-  height: 300px;
+  height: 300px; 
 } 
- 
+  
+.espacamento{
+  padding: 10px;
+}
+
 .box {
   width: 390px;
   height: auto;
@@ -60,8 +64,7 @@ div#a-b ul li {
   width: 500px;
 }
 
-ul li{
-  
+ul li{  
   color:brown;
 }
 
@@ -109,7 +112,7 @@ ul li{
   height: 200px; 
   width: 300px;
 }
-
+ 
 
 
 
