@@ -1,0 +1,29 @@
+{
+    "db": [
+        {
+            "id": "1",
+            "nome": "Neymar Jr",
+            "numero": 10,
+            "gols": 13,
+            "imagemUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Bra-Cos_%281%29.jpg/220px-Bra-Cos_%281%29.jpg",
+            "efeitinho": false
+        },
+        {
+            "id": "2",
+            "nome": "Coutinho",
+            "numero": 11,
+            "gols": 10,
+            "imagemUrl": "http://cdn.espn.com.br/image/wide/622_eb92adc2-2b27-479b-971f-4fe29eb23638.jpg",
+            "efeitinho": false
+        },
+        {
+            "id": "3",
+            "nome": "Marcelo",
+            "numero": 16,
+            "gols": 16,
+            "imagemUrl": "https://abrilveja.files.wordpress.com/2017/08/marcelo-coletiva-selecao.jpg?quality=70&strip=info&w=680&h=453&crop=1",
+            "efeitinho": false
+        }
+    ]
+}
+  
