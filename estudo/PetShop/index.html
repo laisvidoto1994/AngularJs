@@ -1,12 +1,14 @@
-<html>
+<html ng-app="myApp">
 
 <head>
   <title>Home</title>
   <meta charset="utf-8">
+  <script src="node_modules/angular/angular.min.js"></script>
   <link rel="stylesheet" href="./style/style.css">
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous">
     </script>
+  <script src="./controllers/indexController.js"></script>
 </head>
 
 <body>
@@ -15,7 +17,7 @@
   <div class="header">
 
     <h1>Pet Shop</h1>
-    <img src="/imagem/logo.PNG" alt="logo">
+    <!--<img src="/imagem/logo.PNG" alt="logo">-->
 
     <ul class="nav">
       <li>
@@ -56,10 +58,9 @@
     </ol>
   </div>
 
+  <h2>presentes para os amiguinhos</h2>
 
-  <div style="padding: 10px">
-
-    <h2>presentes para os amiguinhos</h2>
+  <div style="padding: 0px 10px 10px 10px">
 
     <div class="gallery">
       <img src="https://img.elo7.com.br/product/original/1976C46/cama-pet-cachorro-gato-batman-m-batman.jpg" alt="5Terre" width="600"

@@ -26,6 +26,6 @@ app.controller('myGoogleCtrl', function ($scope, $http) {
             position: latLng,
             map: map
         });
-    } 
+    }
 
 });

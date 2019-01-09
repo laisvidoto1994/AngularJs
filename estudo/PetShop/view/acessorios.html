@@ -1,15 +1,17 @@
-<html>
+<html ng-app="myApp">
 
 <head>
   <title>Acessorios</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="../style/style.css">
+  <script src="../node_modules/angular/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous">
     </script>
+  <script src="../controllers/acessoriosController.js"></script>
 </head>
 
-<body>
+<body ng-controller="AcessoariosCtrl">
 
   <script>
     $(document).ready(function () {
@@ -22,44 +24,32 @@
   <div id="aba"></div>
 
   <div class="main-content">
+
     <h1>Acessorios: </h1>
-
-    <h3>Camas</h3>
-
+    <h3>Camas </h3>
+ 
     <div class="parallax imagem1"></div>
-    <div style="height:50px;background-color:rgba(255, 255, 255,0.5);font-size:26px;  text-align: center;">
-      Cama Batman
-    </div>
-    <div class="parallax imagem1"></div>
+    <div class="estiloImagem">Cama do Batman</div>
+    <div class="parallax"></div>
 
     <div class="parallax imagem2"></div>
-    <div style="height:50px;background-color:rgba(255, 255, 255,0.5);font-size:26px;  text-align: center;">
-      Cama Florida
-    </div>
+    <div class="estiloImagem"> Cama Florida </div>
     <div class="parallax imagem2"></div>
 
     <div class="parallax imagem3"></div>
-    <div style="height:50px;background-color:rgba(255, 255, 255,0.5);font-size:26px;  text-align: center;">
-      Cama Sofa
-    </div>
+    <div class="estiloImagem"> Cama Sofa </div>
     <div class="parallax imagem3"></div>
 
     <div class="parallax imagem4"></div>
-    <div style="height:50px;background-color:rgba(255, 255, 255,0.5);font-size:26px;  text-align: center;">
-      Cama Melancia
-    </div>
+    <div class="estiloImagem"> Cama Melancia </div>
     <div class="parallax imagem4"></div>
 
     <div class="parallax imagem5"></div>
-    <div style="height:50px;background-color:rgba(255, 255, 255,0.5);font-size:26px;  text-align: center;">
-      Cama diferente
-    </div>
+    <div class="estiloImagem"> Cama diferente </div>
     <div class="parallax imagem5"></div>
 
-  </div>
-
-  <!-- Rodapé -->
-  <div id="rodape"></div>
+    <!-- Rodapé -->
+    <div id="rodape"></div>
 
 </body>
 

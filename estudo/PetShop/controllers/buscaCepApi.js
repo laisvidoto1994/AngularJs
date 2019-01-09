@@ -1,17 +1,17 @@
 var app = angular.module('myApp', []);
-app.controller('myCtrl', function ($scope, $http) {
+app.controller('myCtrl', function($scope, $http) {
 
-    $(document).ready(function () {
+    $(document).ready(function() {
         $("#aba").load("abas.html");
         $("#rodape").load("rodape.html");
     });
 
-    $scope.nova = function () {
+    $scope.nova = function() {
         location.href = "cadastro.html"
     }
 
     var result = '';
-    $scope.submit = function () {
+    $scope.submit = function() {
         result = $scope.data;
 
         $http({ method: "GET", url: "https://viacep.com.br/ws/" + result + "/json/" })
@@ -48,11 +48,11 @@ app.controller('myCtrl', function ($scope, $http) {
     $scope.checked = false;
     $scope.checked2 = true;
 
-    $scope.btnStatus = function () {
+    $scope.btnStatus = function() {
         return !($scope.checked == true);
     }
 
-    $scope.remover = function () {
+    $scope.remover = function() {
         $scope.data = "";
     }
 });

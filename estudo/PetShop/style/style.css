@@ -237,8 +237,7 @@ button{
 .imagem5 {
   background-image: url('https://img.clasf.com.br/2016/06/06/Cama-Cachorro-Gato-Caminha-Pet-Porte-Tamanho-Mdio-20160606143720.jpg');
 }
-
-
+ 
 
 div.gallery {
   margin: 5px;
@@ -258,5 +257,12 @@ div.gallery img {
 
 div.desc {
   padding: 15px;
+  text-align: center;
+}
+
+.estiloImagem{
+  height:50px;
+  background-color:rgba(255, 255, 255,0.5);
+  font-size:26px;  
   text-align: center;
 }
