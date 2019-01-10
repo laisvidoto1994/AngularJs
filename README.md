@@ -1,5 +1,10 @@
 # Estudos em AngularJs
 
+## automação de testes Protractor 
+
+https://imasters.com.br/back-end/primeiros-passos-com-protractor
+
+
 #graficos em Google Chart 
  
 https://www.devmedia.com.br/introducao-a-google-chart-tools/26453
