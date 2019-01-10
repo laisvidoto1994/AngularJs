@@ -12,3 +12,6 @@
 3º) e por fim, no terminal, e execulte o seguinte comando abaixo:
 
 #### http-server -a localhost -p 8000
+
+
+![alt text](http://url/to/img.png)
