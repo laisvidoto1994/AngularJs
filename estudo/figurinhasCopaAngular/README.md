@@ -16,12 +16,14 @@
 
 ### Tela Inicial
 
-![alt text](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/figurinhasCopaAngular/img/figurinhasCopaAngular-tela%20de%20favorito.PNG)
+![alt text](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/figurinhasCopaAngular/img/figurinhasCopaAngular-tela%20inicial.PNG)
+
 
 ### Tela de Favoritação de Jogador
 
 ![alt text](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/figurinhasCopaAngular/img/figurinhasCopaAngular-tela%20de%20favorito.PNG)
 
+
 ### Tela de Efeito de rotação da imagem pelo numero de gols
 
-![alt text](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/figurinhasCopaAngular/img/figurinhasCopaAngular-tela%20de%20favorito.PNG)
+![alt text](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/figurinhasCopaAngular/img/figurinhasCopaAngular-tela%20efeito%20de%20cai-cai.PNG)
