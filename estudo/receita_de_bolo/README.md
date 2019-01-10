@@ -15,20 +15,22 @@
 
 #### http-server -a localhost -p 8000
 
+
+
 #### Tela Principal de Receitas
 
-![image](https://user-images.githubusercontent.com/18018049/50918826-6a872580-1428-11e9-8457-0431447b60f7.PNG)
+![image](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/receita_de_bolo/img/tela%20inicial.PNG)
 
 #### Tela cadastro de receitas
 
-![image](https://user-images.githubusercontent.com/18018049/50918827-6a872580-1428-11e9-9697-35b70b4f2199.PNG)
+![image](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/receita_de_bolo/img/cadastro%20de%20receitas.PNG)
  
 
 #### Tela tela de detalhe
 
-![image](https://user-images.githubusercontent.com/18018049/50918829-6a872580-1428-11e9-88ec-f25ef27254d6.PNG)
+![image](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/receita_de_bolo/img/tela%20de%20detalhe%20da%20receita.PNG)
 
 
 #### Tela detalhe2
 
-![image](https://user-images.githubusercontent.com/18018049/50918828-6a872580-1428-11e9-875d-3e5a2f788723.PNG)
+![image](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/receita_de_bolo/img/tela%20de%20detalhe%20da%20receita2.PNG)
