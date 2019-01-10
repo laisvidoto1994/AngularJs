@@ -16,14 +16,18 @@ ul li a{
   color:#f90;
 }
 
-/* tabela de catalogo de gatos */
+.organizacaoTabela{
+  padding-left: 25%;
+}
 
-table {
+/* tabela de catalogo de gatos */
+table { 
   border-collapse: collapse;
-  width: 50%;
+  width: 45%;
 }
  
 table td th {
+  padding: 5%;
   border: 1px solid black;
 }
 

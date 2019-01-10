@@ -1,20 +1,25 @@
-<!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="./public/style/style.css">
+  <link rel="stylesheet" type="text/css" href="./public/style/responsivo.css">
 </head>
 
 <body>
 
-  <ul>
+  <ul class="topnav">
     <li>
-      <a href='./view/inicio.html'>Home</a>
+      <a class="active" href='index.html'>Home</a>
     </li>
-
     <li>
-      <a href='./view/suggest.html'>Suggest</a>
+      <a href='./public/view/inicio.html'>inicio</a>
+    </li>
+    <li>
+      <a href='./public/view/suggest.html'>Suggest</a>
+    </li>
+    <li class="right">
+      <a href="#about">About</a>
     </li>
   </ul>
 
@@ -31,7 +36,7 @@
   <br/>
 
   <!-- Código de incorporação XHTML válido para vídeos do YouTube-> http://scriptgenerator.net/valid-xhtml-youtube-embed-code/ -->
-  <!--  -->
+  <!-- video do gato -->
   <div style='text-align: center; margin: 0 auto'>
 
     <object style='width:500px; height:300px;'>
@@ -57,8 +62,10 @@
   <br/>
   <br/>
 
+  <!-- video 2 -->
   <iframe width="500px" height="300px" src="https://www.youtube.com/embed/BdcxpPwpaw4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen></iframe>
+
 
   <ul type="circle">
     <li>
@@ -66,77 +73,73 @@
     </li>
     <br/>
   </ul>
+  <div class="organizacaoTabela">
+    <table border="1">
+      <tr>
+        <th>Raça</th>
+        <th>foto</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>gato siamês</li>
+          </ul>
+        </td>
+        <td>
+          <img src="https://t1.ea.ltmcdn.com/pt/images/9/9/4/img_como_saber_se_o_gato_e_siames_22499_paso_3_600.jpg" alt="gato siamês"
+          />
+        </td>
+      </tr>
 
-  <table border="1">
-    <tr>
-      <th>Raça</th>
-      <th>foto</th>
-    </tr>
-    <tr>
-      <td>
-        <ul>
-          <li>gato siamês
-          </li>
-        </ul>
-      </td>
-      <td>
-        <img src="https://t1.ea.ltmcdn.com/pt/images/9/9/4/img_como_saber_se_o_gato_e_siames_22499_paso_3_600.jpg" alt="gato siamês"
-        />
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>gato norueguês da floresta</li>
+          </ul>
+        </td>
+        <td>
+          <img src="http://animais.culturamix.com/blog/wp-content/gallery/o-gato-noruegues-da-floresta-6/O-Gato-Noruegues-da-Floresta-17.jpg"
+            alt="gato norueguês da floresta" />
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <ul>
-          <li>gato norueguês da floresta
-          </li>
-        </ul>
-      </td>
-      <td>
-        <img src="http://animais.culturamix.com/blog/wp-content/gallery/o-gato-noruegues-da-floresta-6/O-Gato-Noruegues-da-Floresta-17.jpg"
-          alt="gato norueguês da floresta" />
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>gato curl americano</li>
+          </ul>
+        </td>
+        <td>
+          <img src="https://i.pinimg.com/236x/0c/2c/43/0c2c43117be2d5d623b26598f96e49b3--american-curl-curls.jpg" alt="gato curl americano"
+          />
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <ul>
-          <li>gato curl americano
-          </li>
-        </ul>
-      </td>
-      <td>
-        <img src="https://i.pinimg.com/236x/0c/2c/43/0c2c43117be2d5d623b26598f96e49b3--american-curl-curls.jpg" alt="gato curl americano"
-        />
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>gato siberiano</li>
+          </ul>
+        </td>
+        <td>
+          <img src="https://i2.wp.com/www.universodegatos.com/wp-content/uploads/2016/11/Gato-Siberiano-personalidade-e-sau%CC%81de.jpg?resize=730%2C482"
+            alt="gato bombaim" />
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <ul>
-          <li>gato siberiano
-          </li>
-        </ul>
-      </td>
-      <td>
-        <img src="https://i2.wp.com/www.universodegatos.com/wp-content/uploads/2016/11/Gato-Siberiano-personalidade-e-sau%CC%81de.jpg?resize=730%2C482"
-          alt="gato bombaim" />
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>gato mau egípcio</li>
+          </ul>
+        </td>
+        <td>
+          <img src="http://www.guiaderacas.com.br/gatos/racas/egyptian-mau-02.jpg" alt="gato mau egípcio" />
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <ul>
-          <li>gato mau egípcio
-          </li>
-        </ul>
-      </td>
-      <td>
-        <img src="http://www.guiaderacas.com.br/gatos/racas/egyptian-mau-02.jpg" alt="gato mau egípcio" />
-      </td>
-    </tr>
-
-  </table>
+    </table>
+  </div>
 
   <h3>Ver tambem:</h3>
 
