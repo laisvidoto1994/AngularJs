@@ -14,4 +14,4 @@
 #### http-server -a localhost -p 8000
 
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/laisvidoto1994/AngularJs/blob/master/estudo/figurinhasCopaAngular/img/figurinhasCopaAngular-tela%20de%20favorito.PNG)
