@@ -18,3 +18,7 @@
 #### http-server -a localhost -p 8000
 
 
+#### Tela Principal
+
+![image](https://github.com/laisvidoto1994/AngularJs/blob/master/imagem%20das%20telas/graficoGoogleChart/tela%20inicial.PNG)
+
