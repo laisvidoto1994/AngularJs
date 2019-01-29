@@ -1,5 +1,8 @@
 var app = angular.module("testeInicial", []);
 
+/**
+ *  Controller testeInicialCtrl
+ */
 app.controller("testeInicialCtrl", function ($scope) {
 
     google.charts.load('current', { 'packages': ['corechart'] });
@@ -8,7 +11,7 @@ app.controller("testeInicialCtrl", function ($scope) {
         function () {
             drawChart1(); /* barra*/
             drawChart2(); /* pizza*/
-            drawChart3(); /*pizza json*/
+            drawChart3(); /* pizza json*/
             drawChart4(); /* Donut Chart*/
         }
     );
@@ -48,23 +51,19 @@ app.controller("testeInicialCtrl", function ($scope) {
         ]);
 
         var options = {
-
-            title: 'Google Chart',
-
+            title: 'Google Chart the bar',
             subtitle: 'exemplos com anos e dados',
-            height: 500,
-            colors: ['#1b9e77', '#d95f02', '#7570b3'],
+            height: 250,
+            colors: ['#93bfa3', '#f2b680', '#f29999'],//cor das barras em ordem
             legend: {
-                position: 'right'
+                position: 'top',//posição onde ficará as legendas do grafico
+                maxLines: 1, //numero maximo de linhas
             },
             seriesType: 'bars',
-
             vAxis: {
                 title: 'Valor',
             },
-
             hAxis: {
-
                 title: 'Anos',
                 gridlines: {
                     color: '#ffff'
@@ -72,7 +71,7 @@ app.controller("testeInicialCtrl", function ($scope) {
                 baselineColor: 'black',
             },
             backgroundColor: {
-                fill: 'black',
+                fill: '#f2efc4', //cor do plano de fundo do grafico
                 fillOpacity: 0.3
             }
         };
@@ -93,10 +92,8 @@ app.controller("testeInicialCtrl", function ($scope) {
         ]);
 
         var options = {
-
             title: 'Google Chart Pie',
-
-            colors: ['#1b9e77', '#d95f02', '#7570b3', '#FFA500'],
+            colors: ['#93bfa3', '#f2b680', '#f29999', '#737373'],
             legend: {
                 position: 'left',
                 textStyle: {
@@ -105,7 +102,7 @@ app.controller("testeInicialCtrl", function ($scope) {
                 }
             },
             backgroundColor: {
-                fill: 'black',
+                fill: '#f2efc4',
                 fillOpacity: 0.3
             },
             is3D: false,
@@ -119,7 +116,6 @@ app.controller("testeInicialCtrl", function ($scope) {
     function drawChart3() {
 
         var options = {
-
             title: 'Google Chart Pie Json',
             legend: {
                 position: 'left',
@@ -128,11 +124,12 @@ app.controller("testeInicialCtrl", function ($scope) {
                     fontSize: 15
                 },
             },
+            colors: ['#93bfa3', '#f2b680', '#f29999', '#737373','#d97b66'],
             backgroundColor: {
-                fill: 'black',
+                fill: '#f2efc4',
                 fillOpacity: 0.3
             },
-            is3D: true,
+            is3D: true,//deixar o grafico como se fosse 3D
         };
 
         var jsonData = $.ajax({
@@ -161,16 +158,103 @@ app.controller("testeInicialCtrl", function ($scope) {
         ]);
 
         var options = {
-            title: 'Google Chart donut',
+            title: 'Google Chart Donut',
             pieHole: 0.4,
+            colors: ['#93bfa3', '#f2b680', '#f29999', '#737373'],
             backgroundColor: {
-                fill: 'black',
+                fill: '#f2efc4',
                 fillOpacity: 0.3
             }
         }
 
         var chart = new google.visualization.PieChart(document.getElementById('donut'));
         chart.draw(data, options);
+    }
+
+
+});
+
+
+/**
+ *  Controller gaugeCtrl
+ */
+app.controller("gaugeCtrl", function ($scope) {
+
+    google.charts.load('current', { 'packages': ['gauge'] });
+
+    google.charts.setOnLoadCallback(
+        function () {
+            drawChart5(); /* Gauge Chart*/
+        }
+    );
+
+    /* Gauge Chart*/
+    function drawChart5() {
+        var data = google.visualization.arrayToDataTable([
+            ['Label', 'Value'],
+            ['Memory', 80],
+            ['CPU', 55],
+            ['Network', 68]
+        ]);
+
+        var options = {
+            min: 0,//valor minimo do velocimetro
+            width: 400,
+            height: 120,
+            greenFrom: 40, greenTo: 70,//faixa minima e maxima do verde   
+            yellowFrom: 70, yellowTo: 90,//faixa minima e maxima do amarelo            
+            redFrom: 90, redTo: 100,//faixa minima e maxima do vermelho
+            minorTicks: 5,//
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('gauge'));
+        chart.draw(data, options);
+
+        setInterval(function () {
+            data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+            chart.draw(data, options);
+        }, 13000);
+        setInterval(function () {
+            data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+            chart.draw(data, options);
+        }, 5000);
+        setInterval(function () {
+            data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+            chart.draw(data, options);
+        }, 26000);
+    }
+
+});
+
+
+/**
+ * Controller mapaCtrl
+ */
+app.controller("mapaCtrl", function ($scope) {
+
+    google.charts.load('current', { 'packages': ['map'], "mapsApiKey": "AIzaSyCIT5iiiDPx8apkLVMI9XhX8yasWc9kZ00" });
+
+    google.charts.setOnLoadCallback(
+        function () {
+            drawChart6(); /* mapa */
+        }
+    );
+
+    /* mapa */
+    function drawChart6() {
+        var data = google.visualization.arrayToDataTable([
+            ['Lat', 'Long', 'Name'],
+            [37.4232, -122.0853, 'Work'],
+            [37.4289, -122.1697, 'University'],
+            [37.6153, -122.3900, 'Airport'],
+            [37.4422, -122.1731, 'Shopping']
+        ]);
+
+        var map = new google.visualization.Map(document.getElementById('mapa'));
+        map.draw(data, {
+            showTooltip: true,
+            showInfoWindow: true
+        });
     }
 
 });

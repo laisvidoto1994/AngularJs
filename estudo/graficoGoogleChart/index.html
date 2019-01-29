@@ -1,39 +1,33 @@
 <html ng-app="testeInicial">
 
 <head>
+    <!-- loader dos graficos -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+
+    <!-- fazer funcionar o donut e pie -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- scripts do angular -->
     <script src="./node_modules/angular/angular.min.js"></script>
+
+    <!-- scripts do controller -->
     <script type="text/javascript" src="controller/javascript.js"></script>
-    <link href="styles/style.css" rel="stylesheet" type="text/css"> 
+
+    <!-- scripts do css -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body ng-controller="testeInicialCtrl">
+<body>
 
-    <table class="columns">
-        <tr>
-            <td>
-                <div ng-class="grafico" id="pie"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div ng-class="grafico" id="donut"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div ng-class="grafico" id="pieJson"></div>
-            </td>
-        </tr>
+    <h1>Google Charts Darsboards</h1>
 
-        <tr>
-            <td>
-                <div ng-class="grafico" id="barras"></div>
-            </td>
-        </tr>
-    </table>
+    <div ng-class="gauge" id="gauge" ng-controller='gaugeCtrl'></div>
+    <div ng-class="grafico" id="pie" ng-controller='testeInicialCtrl'></div>
+    <div ng-class="grafico" id="donut" ng-controller='testeInicialCtrl'></div>
+    <div ng-class="grafico" id="pieJson" ng-controller='testeInicialCtrl'></div>
+    <div ng-class="grafico" id="barras" ng-controller='testeInicialCtrl'></div>
+    <div ng-class="grafico" id="mapa" ng-controller='mapaCtrl'></div>
 
 </body>
 
